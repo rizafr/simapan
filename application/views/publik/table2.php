@@ -2,8 +2,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<title>.:: SIAPRA (Sistem Informasi Administrasi dan Penanganan Perkara) ::.</title>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<link rel="icon" href="">
 	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">  
 	<script src="<?php echo base_url(); ?>aset/js/jquery.js"></script>		
@@ -77,7 +76,7 @@
 					<colgroup><col /><col /><col /><col /><col /><col /></colgroup>
 					<thead>
 						<tr>
-						<th>No Agenda </th><th>Nama Tersangka</th><th>Perkara</th><th>Nama Jaksa</th><th>Status</th></tr>
+						<th>No Agenda </th><th>Surat Masuk</th><th>Perihal</th><th>Asal Surat Masuk</th><th>Status</th></tr>
 					</thead>
 					<tbody>
 						<?php 						

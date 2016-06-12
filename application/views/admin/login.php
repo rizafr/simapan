@@ -1,6 +1,10 @@
+<?php
+	$q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
+	$q_aplikasi	= $this->db->query("SELECT * FROM t_aplikasi LIMIT 1")->row();
+?>
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>.:: SIAPRA (Sistem Informasi Administrasi dan Penanganan Perkara) ::.</title>
+    <title><?= $q_aplikasi->desc; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
 	<style type="text/css">
@@ -50,9 +54,7 @@
 			</div>
 		</div>-->
 		
-		<?php 
-			$q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
-		?>
+	
 		<div class="container">
 			
 			<div class="container-fluid" style="margin-top: 30px">
@@ -61,7 +63,7 @@
 					<div style="width: 800px; margin: 0 auto; text-align:center">
 						<div class="well well-sm wow fadeInDown">
 							<h3>SELAMAT DATANG </h3>
-							<h4>.:: SIAPRA (Sistem Informasi Administrasi dan Penanganan Perkara) ::.</h4>
+							<h4><?= $q_aplikasi->desc ?></h4>
 						</div>
 					</div>
 					<div style="width: 400px; margin: 0 auto;">
@@ -104,8 +106,8 @@
 				
 			</div><!--/.fluid-container-->
 			<br/>
-			<center style="margin-top: -15px;">Proyek Perubahan Diklatpim IV - Sulta <br>
-				<span> Developed by Ratih Pujihati dan Riza Fauzi Rahman</span>
+			<center style="margin-top: -15px;"><?= $q_aplikasi->projectName ?> <br>
+				<span> <?= $q_aplikasi->developedBy ?></span>
 			</center>
 			
 			<script type="text/javascript">

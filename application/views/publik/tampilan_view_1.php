@@ -1,9 +1,13 @@
 <?php include "jam.php" ?>
+<?php
+	$q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
+	$q_aplikasi	= $this->db->query("SELECT * FROM t_aplikasi LIMIT 1")->row();
+?>
 <!DOCTYPE html>
 <html lang="en"><head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 	<title>
-		SIAPRA - Daftar Sidang Perkara Hari ini
+		<?= $q_aplikasi->desc; ?>
 	</title>
 	<meta charset="UTF-8">
 	<link rel="icon" href="">
@@ -138,7 +142,7 @@
 		<div class="col-md-12">
 			<div class="navbar-header">
 				<a href="#" class="navbar-brand visible-lg visible-md center">
-					<strong></strong> .:: SIAPRA ::. <br /><?php echo $q_instansi->nama; ?>
+					<strong></strong> <?= $q_aplikasi->name ;?> <br /><?php echo $q_instansi->nama; ?>
 				</a>
 				<a href="<?php echo base_url(); ?>admin/homes" class="navbar-brand visible-sm">
 				</a>
@@ -169,8 +173,9 @@
 			<div style="width: 800px; margin: 0 auto; text-align:center">
 				<div class="well well-sm wow fadeInDown">
 					<h3>.:: SELAMAT DATANG ::.</h3>
-				<h4>DAFTAR SIDANG HARI INI </h4>
-				<h4><?php echo $tanggal . " " . $bulan . " " . $tahun; ?></h4>
+					<h4><?= $q_aplikasi->desc; ?></h4>
+					<h4>DAFTAR SURAT MASUK MINGGU INI </h4>
+					<h4><?php echo $tanggal . " " . $bulan . " " . $tahun; ?></h4>
 				</div>
 				</div>					
 				<div id="content">
