@@ -57,7 +57,7 @@ if ($mode == "edt" || $mode == "act_edt") {
 				</tr>
 				<tr>
 					<td width="20%">Tgl. Diterima</td>
-					<td><input type="text" name="tgl_diterima" autofocus tabindex="2" readonly value="<?php echo $tgl_diterima; ?>" style="width: 120px" class="form-control"></td>
+					<td><input type="text" name="tgl_diterima" autofocus tabindex="2" value="<?php echo $tgl_diterima; ?>" style="width: 120px" class="form-control"></td>
 				</tr>
 				<tr>
 					<td width="20%">Sifat</td>
@@ -117,6 +117,12 @@ if ($mode == "edt" || $mode == "act_edt") {
 							<td width="20%">Tanggal Surat</td>
 							<td>
 								<b><input type="text" name="tgl_surat_masuk" tabindex="8" required value="<?php echo $tgl_surat_masuk; ?>" id="tgl_surat_masuk" style="width: 100px" class="form-control"></b>
+							</td>
+						</tr>
+						<tr>
+							<td width="20%">Tanggal Penyelesaian</td>
+							<td>
+								<b><input type="text" name="tanggal_penyelesaian" tabindex="8" required value="<?php echo $tgl_surat_masuk; ?>" id="tgl_surat_masuk" style="width: 100px" class="form-control"></b>
 							</td>
 						</tr>
 						<tr>
