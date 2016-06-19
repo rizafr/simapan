@@ -52,7 +52,7 @@
 			<tr><td width="20%">Disposisi Ke: </td>
 				<td><select name="tujuan_disposisi" class="form-control" tabindex="3" style="width: 200px" required><option value=""> - Status Disposisi - </option>
 					<?php
-						$diposisi	= array('Kasi Pidum','Kajari');
+						$diposisi	= array('Seklur', 'Kasi Pem','Kasi Ekbang', 'Kasi Pembdr', 'Kasi Trantib', 'Kasi Trantib');
 						
 						for ($i = 0; $i < sizeof($diposisi); $i++) {
 							if ($diposisi[$i] == $tujuan_disposisi) {
@@ -63,7 +63,7 @@
 						}			
 					?>			
 				</select></td></tr>
-				<tr><td width="20%">Isi Disposisi</td><td><b><textarea name="isi_instruksi" tabindex="2" required style="width: 400px; height: 60px" class="form-control"><?php echo $isi_instruksi; ?></textarea></b></td></tr>	
+				<tr><td width="20%">Isi Instruksi</td><td><b><textarea name="isi_instruksi" tabindex="2" required style="width: 400px; height: 60px" class="form-control"><?php echo $isi_instruksi; ?></textarea></b></td></tr>	
 				<tr><td colspan="2">
 					<br><button type="submit" class="btn btn-primary" tabindex="6" ><i class="icon icon-ok icon-white"></i> Simpan</button>
 					<a href="<?php echo base_URL(); ?>disposisi/surat_disposisi/<?php echo $this->uri->segment(3); ?>" tabindex="7" class="btn btn-success"><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
@@ -80,8 +80,8 @@
 	
 	<div class="col-lg-6">	
 		<table width="100%" class="table-form">
-			<tr><td width="20%"><tr><td width="60%"><input id="paraf_kasi" type="checkbox" value="1" name="paraf_kasi" <?php echo set_checkbox('paraf_kasi', '1'); ?> > Paraf Kasi Pidum <br/>
-			<input id="paraf_kajari" type="checkbox" value="1" name="paraf_kajari" <?php echo set_checkbox('paraf_kajari', '1'); ?>> Paraf Kajari <br/></td></tr>	</td></tr>	
+			<tr><td width="20%"><tr><td width="60%"><input id="paraf_kasi" type="checkbox" value="1" name="paraf_kasi" <?php echo set_checkbox('paraf_kasi', '1'); ?> > Paraf Lurah <br/>
+			<input id="paraf_kajari" type="checkbox" value="1" name="paraf_kajari" <?php echo set_checkbox('paraf_kajari', '1'); ?>> Paraf Seklur <br/></td></tr>	</td></tr>	
 		</table>
 	</div>
 	

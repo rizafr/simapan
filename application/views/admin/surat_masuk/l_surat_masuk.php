@@ -51,7 +51,7 @@
 				
 				<tbody>
 					<?php 
-						$disposisi = array("1" => "Proses Kasi Pidum", "2" => "Approve Kasi Pidum", "3" => "Approve Kajari", "4" => "Sudah Dilaksanakan", "5" => "Tidak Dilaksanakan");
+						$disposisi = array("1" => "Register Aplikasi", "2" => "Disposisi Lurah", "3" => "Pelaksanaan Instruksi ", "4" => "Belum ada laporan", "5" => "Selesai");
 						
 						
 						if (empty($data)) {

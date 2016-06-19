@@ -79,7 +79,7 @@ if ($mode == "edt" || $mode == "act_edt") {
 							<tr>
 								<td width="20%">Pengirim</td>
 								<td>
-									<b><input type="text" name="asal_surat_masuk" tabindex="3" required value="<?php echo $asal_surat_masuk; ?>" id="asal_surat_masuk" style="width: 400px" class="form-control"></b>
+									<b><input id="pengirim" type="text" name="asal_surat_masuk" tabindex="3" required value="<?php echo $asal_surat_masuk; ?>" id="asal_surat_masuk" style="width: 400px" class="form-control"></b>
 								</td>
 							</tr>		
 							<tr>
@@ -112,11 +112,6 @@ if ($mode == "edt" || $mode == "act_edt") {
 									<b><input type="text" name="kode_surat_masuk" tabindex="6" id="kode_surat_masuk" required value="<?php echo $kode_surat_masuk; ?>" style="width: 100px" class="form-control"></b>
 								</td>
 							</tr>
-							<tr>
-								<td width="20%">Pengirim</td>
-								<td>
-								<b><input type="text" id="pengirim" name="pengirim" tabindex="7" value="<?php echo $pengirim; ?>" style="width: 300px" class="form-control"></b>
-							</td>
 						</tr>
 						<tr>
 							<td width="20%">Tanggal Surat</td>

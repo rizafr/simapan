@@ -36,7 +36,7 @@
 	</script>
 	<style type="text/css">
 		span,b, .danger{
-		width: 20%;
+		width: 16.65%;
 		display: inline-block;
 		text-align: center;
 		background-color : #fafafa;
@@ -76,7 +76,7 @@
 					<colgroup><col /><col /><col /><col /><col /><col /></colgroup>
 					<thead>
 						<tr>
-						<th>No Agenda </th><th>Surat Masuk</th><th>Perihal</th><th>Pengirim</th><th>Status</th></tr>
+						<th>No Agenda </th><th>Surat Masuk</th><th>Perihal</th><th>Sifat</th><th>Tanggal Diterima</th><th>Status</th></tr>
 					</thead>
 					<tbody>
 						<?php 						
@@ -85,44 +85,44 @@
 							} 
 							foreach ($data as $b) {
 							
-							$tgl1 =  date("Y-m-d");  // 1 Oktober 2009
-								$tgl2 = $b->tanggal_perkara;  // 10 Oktober 2009
+							// $tgl1 =  date("Y-m-d");  // 1 Oktober 2009
+							// 	$tgl2 = $b->tanggal_perkara;  // 10 Oktober 2009
 								
-								// memecah tanggal untuk mendapatkan bagian tanggal, bulan dan tahun
-								// dari tanggal pertama
+							// 	// memecah tanggal untuk mendapatkan bagian tanggal, bulan dan tahun
+							// 	// dari tanggal pertama
 								
-								$pecah1 = explode("-", $tgl1);
-								$date1 = $pecah1[2];
-								$month1 = $pecah1[1];
-								$year1 = $pecah1[0];
+							// 	$pecah1 = explode("-", $tgl1);
+							// 	$date1 = $pecah1[2];
+							// 	$month1 = $pecah1[1];
+							// 	$year1 = $pecah1[0];
 								
-								// memecah tanggal untuk mendapatkan bagian tanggal, bulan dan tahun
-								// dari tanggal kedua
+							// 	// memecah tanggal untuk mendapatkan bagian tanggal, bulan dan tahun
+							// 	// dari tanggal kedua
 								
-								$pecah2 = explode("-", $tgl2);
-								$date2 = $pecah2[2];
-								$month2 = $pecah2[1];
-								$year2 =  $pecah2[0];
+							// 	$pecah2 = explode("-", $tgl2);
+							// 	$date2 = $pecah2[2];
+							// 	$month2 = $pecah2[1];
+							// 	$year2 =  $pecah2[0];
 								
-								// menghitung JDN dari masing-masing tanggal
+							// 	// menghitung JDN dari masing-masing tanggal
 								
-								$jd1 = GregorianToJD($month1, $date1, $year1);
-								$jd2 = GregorianToJD($month2, $date2, $year2);
+							// 	$jd1 = GregorianToJD($month1, $date1, $year1);
+							// 	$jd2 = GregorianToJD($month2, $date2, $year2);
 								
-								// hitung selisih hari kedua tanggal
+							// 	// hitung selisih hari kedua tanggal
 								
-								$selisih = $jd2 - $jd1;
+							// 	$selisih = $jd2 - $jd1;
 								
-								if($selisih>0){
+								if($b->status_disposisi == 0){
 									$warna ="danger";
 									$status = $selisih ." hari lagi";
 									$label ="label label-danger";
 								}
-								else if($selisih==0){
+								else if($b->status_disposisi == 1){
 									$warna =" success";
-									$status = "SEDANG BERLANGSUNG";
+									$status = "Disposisi Lurah";
 									$label ="label label-success";
-								}else if($selisih<0){
+								}else if($b->status_disposisi == 2){
 									$warna ="info";
 									$status ="SELESAI";
 									$label ="label label-info ";
@@ -130,7 +130,7 @@
 								
 							?>
 							<tr class="danger">
-							<td class="danger"><?php echo $b->no_agenda;?></td><td><?php echo $b->nama_tersangka; ?></td><td><?php echo $b->perkara?></td><td><font color='blue'><?php echo $b->nama_jaksa?></font></td><td><div class="<?php echo $label ?>"><?php echo $status ?></div></td>
+							<td class="danger"><?php echo $b->no_agenda;?></td><td><?php echo $b->asal_surat_masuk; ?></td><td><?php echo $b->perihal_surat_masuk?></td><td><?php echo $b->status_surat_masuk?></td><td><font color='blue'><?php echo tgl_jam_sql($b->tgl_diterima) ?></font></td><td><div class="<?php echo $label ?>"><?php echo $status ?></div></td>
 							</tr>
 							<?php 
 							}

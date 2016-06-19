@@ -10,7 +10,7 @@ class Publik extends CI_Controller {
 	}
 	
 	 public function table1(){        
-	 	$a['data']		= $this->db->query("SELECT p.*,j.* FROM perkara p, jaksa j WHERE p.id_jaksa=j.id_jaksa order by p.tanggal_perkara asc  ")->result();
+	 	$a['data']		= $this->db->query("SELECT * FROM surat_masuk order by tgl_diterima asc ")->result();
 		
         $this->load->view('publik/table2',$a);
     }
