@@ -76,7 +76,7 @@
 					<colgroup><col /><col /><col /><col /><col /><col /></colgroup>
 					<thead>
 						<tr>
-						<th>No Agenda </th><th>Surat Masuk</th><th>Perihal</th><th>Asal Surat Masuk</th><th>Status</th></tr>
+						<th>No Agenda </th><th>Surat Masuk</th><th>Perihal</th><th>Pengirim</th><th>Status</th></tr>
 					</thead>
 					<tbody>
 						<?php 						

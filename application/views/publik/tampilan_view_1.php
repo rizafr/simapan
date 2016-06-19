@@ -177,51 +177,51 @@
 					<h4>DAFTAR SURAT MASUK MINGGU INI </h4>
 					<h4><?php echo $tanggal . " " . $bulan . " " . $tahun; ?></h4>
 				</div>
-				</div>					
-				<div id="content">
-				</div>
-				</div>
+			</div>					
+			<div id="content">
+			</div>
+		</div>
 				
-				</div>
-				
-				<!--<script src="<?php echo base_url(); ?>aset/sidang/jquery.js"></script>-->
-				<script>
-				/* Preloader */
+	</div>
+	
+	<!--<script src="<?php echo base_url(); ?>aset/sidang/jquery.js"></script>-->
+	<script>
+		/* Preloader */
 				//paste this code under head tag or in a seperate js file.
 				// Wait for window load
 				$(window).load(function () {
-				// Animate loader off screen
-				$(".se-pre-con").fadeOut("slow");
-				$('.row-item').fadeIn("slow");
+					// Animate loader off screen
+					$(".se-pre-con").fadeOut("slow");
+					$('.row-item').fadeIn("slow");
 				});
 				
 				function calcHeight()
 				{
-				//find the height of the internal page
-				var the_height =
-				document.getElementById('the_iframe').contentWindow.
-				document.body.scrollHeight;
-				
-				//change the height of the iframe
-				document.getElementById('the_iframe').height =
-				the_height;
+					//find the height of the internal page
+					var the_height =
+					document.getElementById('the_iframe').contentWindow.
+					document.body.scrollHeight;
+					
+					//change the height of the iframe
+					document.getElementById('the_iframe').height =
+					the_height;
 				}
 				
 				
 				/* jQuery toggle layout */
 				$('#btnToggle').click(function () {
-				if ($(this).hasClass('on')) {
-				$('#main .col-md-6').addClass('col-md-4').removeClass('col-md-6');
-				$(this).removeClass('on');
-				}
-				else {
-				$('#main .col-md-4').addClass('col-md-6').removeClass('col-md-4');
-				$(this).addClass('on');
-				}
+					if ($(this).hasClass('on')) {
+						$('#main .col-md-6').addClass('col-md-4').removeClass('col-md-6');
+						$(this).removeClass('on');
+					}
+					else {
+						$('#main .col-md-4').addClass('col-md-6').removeClass('col-md-4');
+						$(this).addClass('on');
+					}
 				});
-				</script>
-				
-				
-				</body>
-				</html>
+			</script>
+			
+			
+		</body>
+		</html>
 								

@@ -34,14 +34,16 @@
 	-->
 	<div class="adv-table">		
 		<section id="unseen">
-			<table  class="display table table-bordered table-striped table-condensed table-hover" id="example">
+			<table  class="display table table-bordered table-striped table-condensed table-hover" id="suratMasuk">
 				<thead>
 					<tr>
 						<th width="10%">No. Agd/Kode</th>
+						<th width="5%">Tgl. Diterima</th>
 						<th width="21%">Perihal, File</th>
-						<th width="15%">Asal Surat</th>
+						<th width="15%">Pengirim</th>
 						<th width="11%">Nomor, Tgl. Surat</th>
 						<th width="7.5%">Sifat Surat</th>
+						<th width="5%">Tgl. Penyelesaian</th>
 						<th width="7.5%">Status Disposisi</th>
 						<th width="25%">Aksi</th>
 					</tr>
@@ -60,6 +62,9 @@
 							?>
 							<tr>
 								<td><?php echo $b->no_agenda."/".$b->kode_surat_masuk;?></td>
+								<td>
+									<?= tgl_jam_sql($b->tgl_diterima) ?>
+								</td>
 								<td><?php echo $b->perihal_surat_masuk."<br><b>File : </b><i><a href='".base_URL()."upload/surat_masuk/".$b->lampiran."' target='_blank'>".$b->lampiran."</a>"?></td>
 								<td><?php echo $b->asal_surat_masuk; ?></td>
 								<td><?php echo $b->no_surat_masuk."<br><i>".tgl_jam_sql($b->tgl_surat_masuk)."</i>"?></td>
@@ -72,6 +77,9 @@
 										echo "class='label label-default'";			
 									}
 								?>><?php echo $b->status_surat_masuk;?></span> 
+								</td>
+								<td>
+									<?= tgl_jam_sql($b->tgl_surat_masuk) ?>
 								</td>
 								<td><button type="button" class="btn btn-default btn-sm">
 									<span class="icon-envelope icon-white"></span> <?php echo $disposisi[$b->status_disposisi]; ?>
@@ -110,3 +118,10 @@
 	</div>
 	
 </div>
+<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			$('#suratMasuk').dataTable( {
+				"aaSorting": [[ 2, "asc" ]]
+			} );
+		} );
+	</script>

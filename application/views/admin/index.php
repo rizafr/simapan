@@ -112,11 +112,11 @@
 				});
 				
 				$(function () {
-					$( "#dari" ).autocomplete({
+					$( "#pengirim" ).autocomplete({
 						source: function(request, response) {
 							$.ajax({ 
 								url: "<?php echo site_url('klasifikasi_surat/get_instansi_lain'); ?>",
-								data: { kode: $("#dari").val()},
+								data: { kode: $("#pengirim").val()},
 								dataType: "json",
 								type: "POST",
 								success: function(data){
@@ -174,7 +174,10 @@
 	<script type="text/javascript" charset="utf-8">
 		$(document).ready(function() {
 			$('#example').dataTable( {
-				"aaSorting": [[ 1, "asc" ]]
+				"columnDefs": [{
+				    "defaultContent": "-",
+				    "targets": "_all"
+				 }]
 			} );
 		} );
 	</script>
