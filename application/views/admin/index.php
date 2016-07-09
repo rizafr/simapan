@@ -75,7 +75,7 @@
 									response(data);
 								}    
 							});
-						},
+						}
 					});
 				});
 				
@@ -92,6 +92,8 @@
 								}    
 							});
 						},
+						minLength: 2,
+						autofocus: true
 					});
 				});
 				
@@ -108,6 +110,8 @@
 								}    
 							});
 						},
+						minLength: 2,
+						autofocus: true
 					});
 				});
 				
@@ -117,17 +121,26 @@
 							$.ajax({ 
 								url: "<?php echo site_url('klasifikasi_surat/get_instansi_lain'); ?>",
 								data: { kode: $("#pengirim").val()},
-								dataType: "json",
+								dataType:"json",
+								cache: false,
 								type: "POST",
 								success: function(data){
 									response(data);
 								}    
 							});
 						},
+						minLength: 2,
+						autofocus: true
 					});
 				});
-				
-				
+
+				$(function() {
+					$( ".tgl" ).datepicker({
+						changeMonth: true,
+						changeYear: true,
+						dateFormat: 'yy-mm-dd'
+					});
+				});
 				$(function() {
 					$( "#tgl_surat" ).datepicker({
 						changeMonth: true,

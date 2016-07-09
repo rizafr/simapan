@@ -1,6 +1,8 @@
 <?php
 	$q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 	$q_aplikasi	= $this->db->query("SELECT * FROM t_aplikasi LIMIT 1")->row();
+	$queryUnReported	= $this->db->query("SELECT * FROM surat_masuk where status_disposisi = '2'");
+	$unReportCount = $queryUnReported->num_rows();
 ?>
 <div class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container">
@@ -23,50 +25,17 @@
 									<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 										
 										<i class="icon-envelope icon-white"></i>
-										<span class="badge bg-important">7</span>
+										<span class="badge bg-important"><?= $unReportCount; ?></span>
 									</a>
 									<ul class="dropdown-menu extended notification">
 										<div class="notify-arrow notify-arrow-red"></div>
 										<li>
-											<p class="red">You have 7 new notifications</p>
+											<p class="red">Ada <?= $unReportCount; ?> surat yang belum ditindaklanjuti atau belum ada laporan</p>
 										</li>
 										<li>
-											<a href="#">
-												<span class="label label-danger"><i class="icon-bolt"></i></span>
-												Server #3 overloaded.
-												<span class="small italic">34 mins</span>
+											<a href="<?php echo base_url(); ?>surat_masuk/masuk">
+												<i class="fa fa-eye"></i> Lihat
 											</a>
-										</li>
-										<li>
-											<a href="#">
-												<span class="label label-warning"><i class="icon-bell"></i></span>
-												Server #10 not respoding.
-												<span class="small italic">1 Hours</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<span class="label label-danger"><i class="icon-bolt"></i></span>
-												Database overloaded 24%.
-												<span class="small italic">4 hrs</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<span class="label label-success"><i class="icon-plus"></i></span>
-												New user registered.
-												<span class="small italic">Just now</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												<span class="label label-info"><i class="icon-bullhorn"></i></span>
-												Application error.
-												<span class="small italic">10 mins</span>
-											</a>
-										</li>
-										<li>
-											<a href="#">See all notifications</a>
 										</li>
 									</ul>
 								</li>

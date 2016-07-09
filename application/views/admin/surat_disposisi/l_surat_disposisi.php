@@ -1,3 +1,4 @@
+<?= $this->breadcrumbs->show(); ?>
 <div class="clearfix">
 	<div class="row">
 		<div class="col-lg-12">
@@ -46,8 +47,8 @@
 							?>
 							<tr>
 								<td class="ctr"><?php echo $no;?></td>
-								<td><?php echo $b->tujuan_disposisi; ?></td>
-								<td><?php echo $b->isi_instruksi; ?></td>
+								<td><?php echo $b->disposisi; ?></td>
+								<td><?php echo $b->intruksi; ?></td>
 								<td><?php echo tgl_jam_sql($b->tgl_instruksi)?></td>
 								<td><?php echo $b->waktu_lama_instruksi ." hari <br />". tgl_jam_sql($b->tgl_instruksi) ." s/d ".tgl_jam_sql($b->batas_waktu)?></td>
 								<td class="ctr">

@@ -33,20 +33,25 @@ header('Content-Disposition: attachment; filename="' . basename($file_name) . '"
         <link href="<?php echo base_url(); ?>assets/admin/css/bootstrap.css" rel="stylesheet" />
     </head>
     <body onload="window.print()">
+		<h2>DAFTAR SURAT MASUK </h2>
+		<h3><?php echo tgl_jam_sql($tgl_start)." - ".tgl_jam_sql($tgl_end);?></h3>
 		<table border="1" style="border-top:3px solid #004D66; ">
 			<tr style="background-color:#004D66;color: #fff ; border:1px solid #eee ; align:center;">
 				<th width="3%">No</th>
 				<th width="5%">Kode Surat</th>
-				<th width="28%">Isi Ringkas</th>
-				<th width="18%">Asal Surat</th>
-				<th width="17%">Nomor Surat</th>
+				<th width="17%">No Surat</th>
 				<th width="7%">Tgl. Surat</th>
+				<th width="7%">Sifat</th>
+				<th width="28%">Perihal</th>
+				<th width="18%">Pengirim</th>
 				<th width="10%">Pengolah</th>
 				<th width="7%">Tgl, Paraf</th>
-				<th width="5%">Ket</th>
+				<th width="5%">Status Disposi</th>
 			</tr>
 				
-			<?php 
+			<?php
+			$disposisi = array("1" => "Register Aplikasi", "2" => "Belum ada laporan", "3" => "Selesai");
+
 			if (!empty($data)) {
 				$no = 0;
 			foreach ($data as $d) {
@@ -55,13 +60,14 @@ header('Content-Disposition: attachment; filename="' . basename($file_name) . '"
 			<tr>
 				<td><?php echo $no; ?></td>
 				<td><?php echo $d->kode_surat_masuk; ?></td>
-				<td><?php echo $d->perihal_surat_masuk; ?></td>
-				<td><?php echo $d->asal_surat_masuk; ?></td>
 				<td><?php echo $d->no_surat_masuk; ?></td>
 				<td><?php echo tgl_jam_sql($d->tgl_surat_masuk); ?></td>
+				<td><?php echo $d->status_surat_masuk; ?></td>
+				<td><?php echo $d->perihal_surat_masuk; ?></td>
+				<td><?php echo $d->asal_surat_masuk; ?></td>
 				<td><?php echo gval("t_admin", "id", "nama", $d->pengolah); ?></td>
 				<td><?php echo tgl_jam_sql($d->tgl_diterima); ?></td>
-				<td><?php echo $d->keterangan; ?></td>
+				<td><?php echo $disposisi[$d->status_disposisi] ; ?></td>
 			</tr>
 			<?php 
 				}
@@ -69,7 +75,7 @@ header('Content-Disposition: attachment; filename="' . basename($file_name) . '"
 				echo "<tr><td colspan='9' style='text-align: center'>Tidak ada data</td></tr>";
 			}
 			?>
-                </tr>
+			</table>
     </body>
 </html>
 

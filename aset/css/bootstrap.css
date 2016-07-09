@@ -221,6 +221,14 @@ table {
   border-spacing: 0;
 }
 
+.mt25 {
+  margin-top: 25px !important;
+}
+
+.right {
+  float: right;
+}
+
 @media print {
   * {
     color: #000 !important;

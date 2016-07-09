@@ -1,0 +1,941 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e57f5aeb-fc1b-4974-b162-f42f296c37f1" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/models/crud_intruksi.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/Aplikasi_SI_MAPAN.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/CONTOH_NOTA_DINAS.doc" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/Gambar-bergerak-naruto-09.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/PENGUMUMAN_KE_KPDE.docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/PENGUMUMAN_KE_KPDE_(1).docx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/laptop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/no-photo-333.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/pin2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/siapra_disposisi_disposisi_cetak_1.pdf" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/disposisi.php" afterPath="$PROJECT_DIR$/application/controllers/disposisi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/klasifikasi_surat.php" afterPath="$PROJECT_DIR$/application/controllers/klasifikasi_surat.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/surat_masuk.php" afterPath="$PROJECT_DIR$/application/controllers/surat_masuk.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/agenda/surat_masuk_cetak.php" afterPath="$PROJECT_DIR$/application/views/admin/agenda/surat_masuk_cetak.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/index.php" afterPath="$PROJECT_DIR$/application/views/admin/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/surat_disposisi/f_surat_disposisi.php" afterPath="$PROJECT_DIR$/application/views/admin/surat_disposisi/f_surat_disposisi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/surat_disposisi/l_surat_disposisi.php" afterPath="$PROJECT_DIR$/application/views/admin/surat_disposisi/l_surat_disposisi.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/surat_masuk/f_surat_masuk.php" afterPath="$PROJECT_DIR$/application/views/admin/surat_masuk/f_surat_masuk.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/surat_masuk/l_surat_masuk.php" afterPath="$PROJECT_DIR$/application/views/admin/surat_masuk/l_surat_masuk.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/template/menu.php" afterPath="$PROJECT_DIR$/application/views/admin/template/menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/publik/table2.php" afterPath="$PROJECT_DIR$/application/views/publik/table2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aset/css/bootstrap.css" afterPath="$PROJECT_DIR$/aset/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/simapan.sql" afterPath="$PROJECT_DIR$/database/simapan.sql" />
+    </list>
+    <ignored path="simapan.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="simapan" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="f_surat_masuk.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/surat_masuk/f_surat_masuk.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="87">
+              <caret line="18" column="0" selection-start-line="17" selection-start-column="3" selection-end-line="18" selection-end-column="0" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="surat_masuk.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/surat_masuk.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="98" column="255" selection-start-line="98" selection-start-column="220" selection-end-line="98" selection-end-column="255" />
+              <folding>
+                <marker date="1468054826678" expanded="true" signature="970:995" ph="SELECT * FRO... surat_masuk" />
+                <marker date="1468054826678" expanded="true" signature="2740:2793" ph="DELETE FROM " />
+                <marker date="1468054826678" expanded="true" signature="3016:3167" ph="SELECT * FRO... surat_masuk" />
+                <marker date="1468054826678" expanded="true" signature="3556:3611" ph="SELECT * FRO... surat_masuk" />
+                <marker date="1468054826678" expanded="true" signature="4002:4314" ph="INSERT INTO surat_masuk... " />
+                <marker date="1468054826678" expanded="true" signature="4352:4638" ph="INSERT INTO surat_masuk... " />
+                <marker date="1468054826678" expanded="true" signature="5093:5533" ph="UPDATE surat... " />
+                <marker date="1468054826678" expanded="true" signature="5571:5972" ph="UPDATE surat... " />
+                <marker date="1468054826678" expanded="true" signature="6434:6587" ph="SELECT * FRO... surat_masuk" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="l_surat_masuk.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/surat_masuk/l_surat_masuk.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="307">
+              <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+              <folding>
+                <marker date="1468075776731" expanded="true" signature="1964:2001" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="disposisi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/disposisi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="348">
+              <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
+              <folding>
+                <marker date="1468075710315" expanded="true" signature="2149:2208" ph="SELECT * FRO... disposisi" />
+                <marker date="1468075710315" expanded="true" signature="3371:3425" ph="DELETE FROM " />
+                <marker date="1468075710315" expanded="true" signature="4454:4619" ph="SELECT * FRO... disposisi" />
+                <marker date="1468075710315" expanded="true" signature="4454:4628" ph="SELECT d.*, disposisi" />
+                <marker date="1468075710315" expanded="true" signature="4454:4659" ph="SELECT d.*, disposisi" />
+                <marker date="1468075710315" expanded="true" signature="5086:5775" ph="INSERT INTO disposisi... " />
+                <marker date="1468075710315" expanded="true" signature="5863:5937" ph="SELECT * FRO... disposisi" />
+                <marker date="1468075710315" expanded="true" signature="6149:6240" ph="UPDATE surat... " />
+                <marker date="1468075710315" expanded="true" signature="6519:6609" ph="SELECT kode_... pelaksanaan_intruksi" />
+                <marker date="1468075710315" expanded="true" signature="7213:7486" ph="UPDATE dispo... " />
+                <marker date="1468075710315" expanded="true" signature="7213:7527" ph="UPDATE dispo... " />
+                <marker date="1468075710315" expanded="true" signature="7213:7586" ph="UPDATE dispo... " />
+                <marker date="1468075710315" expanded="true" signature="7679:7764" ph="UPDATE surat... " />
+                <marker date="1468075710315" expanded="true" signature="8239:8458" ph="SELECT * FRO... disposisi" />
+                <marker date="1468075710315" expanded="true" signature="8880:8935" ph="SELECT * FRO... surat_masuk" />
+                <marker date="1468075710315" expanded="true" signature="8988:9056" ph="SELECT tujua... disposisi" />
+                <marker date="1468075710315" expanded="true" signature="9112:9274" ph="SELECT d.isi... disposisi" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="my_helper.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/helpers/my_helper.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-3017">
+              <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+              <folding>
+                <marker date="1465220016176" expanded="true" signature="189:227" ph="SELECT max($... " />
+                <marker date="1465220016176" expanded="true" signature="453:510" ph="SELECT ${$di... ${$tabel}" />
+                <marker date="1465220016176" expanded="true" signature="774:822" ph="SELECT nama tr_jenis_nilai" />
+                <marker date="1465220016176" expanded="true" signature="969:1011" ph="SELECT nama tr_mapel" />
+                <marker date="1465220016176" expanded="true" signature="1158:1200" ph="SELECT nama tr_kelas" />
+                <marker date="1465220016176" expanded="true" signature="1346:1387" ph="SELECT nama tr_guru" />
+                <marker date="1465220016176" expanded="true" signature="1533:1575" ph="SELECT nama tr_siswa" />
+                <marker date="1465220016176" expanded="true" signature="3259:3278" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="f_surat_disposisi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/surat_disposisi/f_surat_disposisi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="135" column="141" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="141" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#b#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#b#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#b#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#1;n#form#0;n#!!top" expanded="true" />
+                <marker date="1468074495999" expanded="true" signature="5563:5594" ph="..." />
+                <marker date="1468074495999" expanded="true" signature="5642:5711" ph="..." />
+                <marker date="1468074495999" expanded="true" signature="5670:5711" ph="..." />
+                <marker date="1468074495999" expanded="true" signature="6623:6654" ph="..." />
+                <marker date="1468074495999" expanded="true" signature="6685:6720" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="contoh_notifikasi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/notifikasi/contoh_notifikasi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2610">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1465220016216" expanded="true" signature="18168:18181" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="surat_masuk_cetak.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/agenda/surat_masuk_cetak.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+              <folding>
+                <element signature="e#1593#1677#0#HTML" expanded="true" />
+                <marker date="1468069020691" expanded="true" signature="2832:2850" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="notifikasi.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/notifikasi/notifikasi.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ceknotif.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/notifikasi/ceknotif.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1465220016216" expanded="true" signature="98:164" ph="SELECT * FRO... tabel_pesan" />
+                <marker date="1465220016216" expanded="true" signature="252:266" ph="..." />
+                <marker date="1465220016216" expanded="true" signature="414:945" ph="..." />
+                <marker date="1465220016216" expanded="true" signature="471:940" ph="..." />
+                <marker date="1465220016216" expanded="false" signature="536:583" ph="..." />
+                <marker date="1465220016216" expanded="true" signature="627:853" ph="..." />
+                <marker date="1465220016216" expanded="false" signature="679:697" ph="..." />
+                <marker date="1465220016216" expanded="false" signature="717:730" ph="..." />
+                <marker date="1465220016216" expanded="false" signature="868:883" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/application/views/admin/index.php" />
+        <option value="$PROJECT_DIR$/application/controllers/klasifikasi_surat.php" />
+        <option value="$PROJECT_DIR$/application/views/publik/table2.php" />
+        <option value="$PROJECT_DIR$/application/models/crud_instruksi.php" />
+        <option value="$PROJECT_DIR$/application/models/crud_intruksi.php" />
+        <option value="$PROJECT_DIR$/application/models/crud_ref_disposisi.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/surat_disposisi/l_surat_disposisi.php" />
+        <option value="$PROJECT_DIR$/aset/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/application/controllers/surat_masuk.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/surat_masuk/f_surat_masuk.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/template/menu.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/agenda/surat_masuk_cetak.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/surat_disposisi/f_surat_disposisi.php" />
+        <option value="$PROJECT_DIR$/application/controllers/disposisi.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/surat_masuk/l_surat_masuk.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-17" />
+    <option name="width" value="1387" />
+    <option name="height" value="746" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="publik" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="surat_masuk" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="surat_disposisi" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="notifikasi" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="agenda" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="helpers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="simapan" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/application/models" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e57f5aeb-fc1b-4974-b162-f42f296c37f1" name="Default" comment="" />
+      <created>1468034574697</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1468034574697</updated>
+      <workItem from="1468034577421" duration="31014000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="31014000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-17" y="0" width="1387" height="746" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/application/controllers/manajemen_perkara.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-870">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1465220016152" expanded="true" signature="1227:1287" ph="SELECT * FRO... perkara" />
+            <marker date="1465220016152" expanded="true" signature="1725:1775" ph="DELETE FROM " />
+            <marker date="1465220016152" expanded="true" signature="2101:2153" ph="SELECT * FRO... perkara" />
+            <marker date="1465220016152" expanded="true" signature="2272:2560" ph="INSERT INTO perkara... " />
+            <marker date="1465220016152" expanded="true" signature="2806:3001" ph="UPDATE perka... " />
+            <marker date="1465220016152" expanded="true" signature="3232:3343" ph="SELECT p.*,j... perkara" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/logins.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="31" />
+          <folding>
+            <marker date="1465220016152" expanded="true" signature="903:1069" ph="SELECT p.*, pengguna" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="563">
+          <caret line="95" column="39" selection-start-line="95" selection-start-column="39" selection-end-line="95" selection-end-column="39" />
+          <folding>
+            <marker date="1468043173994" expanded="true" signature="39:72" ph="SELECT * FRO... tr_instansi" />
+            <marker date="1468043173994" expanded="true" signature="116:148" ph="SELECT * FRO... t_aplikasi" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/klasifikasi_surat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2059">
+          <caret line="80" column="140" selection-start-line="80" selection-start-column="140" selection-end-line="80" selection-end-column="140" />
+          <folding>
+            <marker date="1468043288842" expanded="true" signature="554:583" ph="SELECT * FRO... ref_klasifikasi" />
+            <marker date="1468043288842" expanded="true" signature="1366:1469" ph="SELECT * FRO... ref_klasifikasi" />
+            <marker date="1468043288842" expanded="true" signature="1681:1728" ph="SELECT * FRO... ref_klasifikasi" />
+            <marker date="1468043288842" expanded="true" signature="1838:1917" ph="UPDATE ref_k... " />
+            <marker date="1468043288842" expanded="true" signature="2132:2175" ph="SELECT * FRO... ref_klasifikasi" />
+            <marker date="1468043288842" expanded="true" signature="2413:2522" ph="SELECT no_ag... surat_masuk" />
+            <marker date="1468043288842" expanded="true" signature="2960:3070" ph="SELECT id, k... ref_klasifikasi" />
+            <marker date="1468043288842" expanded="true" signature="3482:3540" ph="SELECT insta... pengirim" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/publik/tampilan_view_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1466296966866" expanded="true" signature="66:99" ph="SELECT * FRO... tr_instansi" />
+            <marker date="1466296966866" expanded="true" signature="143:175" ph="SELECT * FRO... t_aplikasi" />
+            <marker date="1466296966866" expanded="true" signature="3929:3962" ph="SELECT * FRO... tr_instansi" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/publik/table2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-292">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <marker date="1468044707010" expanded="true" signature="2664:2701" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/web_model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-522">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1465220016192" expanded="true" signature="94:108" ph="SELECT * FRO... ${$tabel}" />
+            <marker date="1465220016192" expanded="true" signature="211:232" ph="SELECT * FRO... ${$tabel}" />
+            <marker date="1465220016192" expanded="true" signature="343:384" ph="SELECT * FRO... ${$tabel}" />
+            <marker date="1465220016192" expanded="true" signature="485:529" ph="DELETE FROM " />
+            <marker date="1465220016192" expanded="true" signature="636:682" ph="SELECT ${$fi... ${$tabel}" />
+            <marker date="1465220016192" expanded="true" signature="1913:1954" ph="SELECT * FRO... berita" />
+            <marker date="1465220016192" expanded="true" signature="2036:2098" ph="SELECT * FRO... berita" />
+            <marker date="1465220016192" expanded="true" signature="2396:2437" ph="DELETE FROM " />
+            <marker date="1465220016192" expanded="true" signature="2509:2563" ph="UPDATE berit... " />
+            <marker date="1465220016192" expanded="true" signature="2637:2691" ph="UPDATE berit... " />
+            <marker date="1465220016192" expanded="true" signature="2786:2827" ph="SELECT * FRO... berita" />
+            <marker date="1465220016192" expanded="true" signature="2913:2975" ph="SELECT * FRO... berita" />
+            <marker date="1465220016192" expanded="true" signature="3318:3356" ph="SELECT ${$fi... ${$tabel}" />
+            <marker date="1465220016192" expanded="true" signature="3692:3720" ph="select * fro... galeriKategori" />
+            <marker date="1465220016192" expanded="true" signature="3905:3960" ph="select file galeri" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/crud_intruksi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="812">
+          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/surat_disposisi/disposisi_cetak.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-348">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1465220016236" expanded="true" signature="39:72" ph="SELECT * FRO... tr_instansi" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/crud_ref_disposisi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="26" column="32" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/surat_disposisi/l_surat_disposisi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="49" column="60" selection-start-line="49" selection-start-column="60" selection-end-line="49" selection-end-column="60" />
+          <folding>
+            <marker date="1468052049330" expanded="true" signature="1410:1447" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aset/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="224" column="16" selection-start-line="224" selection-start-column="16" selection-end-line="224" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/template/header-info.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1465701982414" expanded="true" signature="39:72" ph="SELECT * FRO... tr_instansi" />
+            <marker date="1465701982414" expanded="true" signature="116:148" ph="SELECT * FRO... t_aplikasi" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/template/menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="28" column="40" selection-start-line="28" selection-start-column="40" selection-end-line="28" selection-end-column="40" />
+          <folding>
+            <marker date="1468062176419" expanded="true" signature="39:72" ph="SELECT * FRO... tr_instansi" />
+            <marker date="1468062176419" expanded="true" signature="116:148" ph="SELECT * FRO... t_aplikasi" />
+            <marker date="1468062176419" expanded="true" signature="197:251" ph="SELECT * FRO... surat_masuk" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/notifikasi/ceknotif.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1465220016216" expanded="true" signature="98:164" ph="SELECT * FRO... tabel_pesan" />
+            <marker date="1465220016216" expanded="true" signature="252:266" ph="..." />
+            <marker date="1465220016216" expanded="true" signature="414:945" ph="..." />
+            <marker date="1465220016216" expanded="true" signature="471:940" ph="..." />
+            <marker date="1465220016216" expanded="false" signature="536:583" ph="..." />
+            <marker date="1465220016216" expanded="true" signature="627:853" ph="..." />
+            <marker date="1465220016216" expanded="false" signature="679:697" ph="..." />
+            <marker date="1465220016216" expanded="false" signature="717:730" ph="..." />
+            <marker date="1465220016216" expanded="false" signature="868:883" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/notifikasi/notifikasi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/notifikasi/contoh_notifikasi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2610">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1465220016216" expanded="true" signature="18168:18181" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/agenda/surat_masuk_cetak.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="38" column="23" selection-start-line="38" selection-start-column="23" selection-end-line="38" selection-end-column="23" />
+          <folding>
+            <element signature="e#1593#1677#0#HTML" expanded="true" />
+            <marker date="1468069020691" expanded="true" signature="2832:2850" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/surat_masuk/f_surat_masuk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="18" column="0" selection-start-line="17" selection-start-column="3" selection-end-line="18" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/my_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3017">
+          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding>
+            <marker date="1465220016176" expanded="true" signature="189:227" ph="SELECT max($... " />
+            <marker date="1465220016176" expanded="true" signature="453:510" ph="SELECT ${$di... ${$tabel}" />
+            <marker date="1465220016176" expanded="true" signature="774:822" ph="SELECT nama tr_jenis_nilai" />
+            <marker date="1465220016176" expanded="true" signature="969:1011" ph="SELECT nama tr_mapel" />
+            <marker date="1465220016176" expanded="true" signature="1158:1200" ph="SELECT nama tr_kelas" />
+            <marker date="1465220016176" expanded="true" signature="1346:1387" ph="SELECT nama tr_guru" />
+            <marker date="1465220016176" expanded="true" signature="1533:1575" ph="SELECT nama tr_siswa" />
+            <marker date="1465220016176" expanded="true" signature="3259:3278" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/surat_disposisi/f_surat_disposisi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="135" column="141" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="141" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#b#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#b#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#b#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#1;n#form#0;n#!!top" expanded="true" />
+            <marker date="1468074495999" expanded="true" signature="5563:5594" ph="..." />
+            <marker date="1468074495999" expanded="true" signature="5642:5711" ph="..." />
+            <marker date="1468074495999" expanded="true" signature="5670:5711" ph="..." />
+            <marker date="1468074495999" expanded="true" signature="6623:6654" ph="..." />
+            <marker date="1468074495999" expanded="true" signature="6685:6720" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/surat_masuk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="98" column="255" selection-start-line="98" selection-start-column="220" selection-end-line="98" selection-end-column="255" />
+          <folding>
+            <marker date="1468054826678" expanded="true" signature="970:995" ph="SELECT * FRO... surat_masuk" />
+            <marker date="1468054826678" expanded="true" signature="2740:2793" ph="DELETE FROM " />
+            <marker date="1468054826678" expanded="true" signature="3016:3167" ph="SELECT * FRO... surat_masuk" />
+            <marker date="1468054826678" expanded="true" signature="3556:3611" ph="SELECT * FRO... surat_masuk" />
+            <marker date="1468054826678" expanded="true" signature="4002:4314" ph="INSERT INTO surat_masuk... " />
+            <marker date="1468054826678" expanded="true" signature="4352:4638" ph="INSERT INTO surat_masuk... " />
+            <marker date="1468054826678" expanded="true" signature="5093:5533" ph="UPDATE surat... " />
+            <marker date="1468054826678" expanded="true" signature="5571:5972" ph="UPDATE surat... " />
+            <marker date="1468054826678" expanded="true" signature="6434:6587" ph="SELECT * FRO... surat_masuk" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/disposisi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="150" column="42" selection-start-line="150" selection-start-column="42" selection-end-line="150" selection-end-column="42" />
+          <folding>
+            <marker date="1468075710315" expanded="true" signature="2149:2208" ph="SELECT * FRO... disposisi" />
+            <marker date="1468075710315" expanded="true" signature="3371:3425" ph="DELETE FROM " />
+            <marker date="1468075710315" expanded="true" signature="4454:4619" ph="SELECT * FRO... disposisi" />
+            <marker date="1468075710315" expanded="true" signature="4454:4628" ph="SELECT d.*, disposisi" />
+            <marker date="1468075710315" expanded="true" signature="4454:4659" ph="SELECT d.*, disposisi" />
+            <marker date="1468075710315" expanded="true" signature="5086:5775" ph="INSERT INTO disposisi... " />
+            <marker date="1468075710315" expanded="true" signature="5863:5937" ph="SELECT * FRO... disposisi" />
+            <marker date="1468075710315" expanded="true" signature="6149:6240" ph="UPDATE surat... " />
+            <marker date="1468075710315" expanded="true" signature="6519:6609" ph="SELECT kode_... pelaksanaan_intruksi" />
+            <marker date="1468075710315" expanded="true" signature="7213:7486" ph="UPDATE dispo... " />
+            <marker date="1468075710315" expanded="true" signature="7213:7527" ph="UPDATE dispo... " />
+            <marker date="1468075710315" expanded="true" signature="7213:7586" ph="UPDATE dispo... " />
+            <marker date="1468075710315" expanded="true" signature="7679:7764" ph="UPDATE surat... " />
+            <marker date="1468075710315" expanded="true" signature="8239:8458" ph="SELECT * FRO... disposisi" />
+            <marker date="1468075710315" expanded="true" signature="8880:8935" ph="SELECT * FRO... surat_masuk" />
+            <marker date="1468075710315" expanded="true" signature="8988:9056" ph="SELECT tujua... disposisi" />
+            <marker date="1468075710315" expanded="true" signature="9112:9274" ph="SELECT d.isi... disposisi" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/surat_masuk/l_surat_masuk.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="61" column="51" selection-start-line="61" selection-start-column="51" selection-end-line="61" selection-end-column="51" />
+          <folding>
+            <marker date="1468075776731" expanded="true" signature="1964:2001" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

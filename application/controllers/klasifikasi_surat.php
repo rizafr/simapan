@@ -76,10 +76,10 @@ class Klasifikasi_surat extends CI_Controller {
 	}
 		
 	public function get_klasifikasi() {
-		$kode 				= $this->input->post('kode_surat_masuk',TRUE);
+		$kode 				= trim($this->input->post('kode', TRUE));
 		
-		$data 				=  $this->db->query("SELECT id, kode, nama FROM ref_klasifikasi WHERE nama LIKE '%$kode%' ORDER BY nama ASC")->result();
-		
+		$data 				=  $this->db->query("SELECT id, kode, nama FROM ref_klasifikasi WHERE nama LIKE '%$kode%' or kode LIKE '%$kode%'  ORDER BY nama ASC")->result();
+
 		$klasifikasi 		=  array();
         foreach ($data as $d) {
 			$json_array				= array();
@@ -92,7 +92,7 @@ class Klasifikasi_surat extends CI_Controller {
 	}
 	
 	public function get_instansi_lain() {
-		$kode 				= $this->input->post('pengirim',TRUE);
+		$kode 				= trim($this->input->post('kode', TRUE));
 		
 		$data 				=  $this->db->query("SELECT instansi FROM pengirim WHERE instansi LIKE '$kode%'")->result();
 		
