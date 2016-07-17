@@ -17,7 +17,6 @@ class Disposisi extends CI_Controller
             redirect("logins/login");
         }
 
-
         //ambil variabel URL
         $act = $this->uri->segment(4);
         $id_suratu = $this->uri->segment(3);
@@ -103,21 +102,21 @@ class Disposisi extends CI_Controller
                 $lampiran_foto = $this->upload->data();
             }
             $queryDisposi = $this->db->query("INSERT INTO disposisi(
-													`id_disposisi` ,
-													`id_surat_masuk` ,
-													`isi_instruksi` ,
-													`tgl_instruksi` ,
-													`batas_waktu` ,
-													`waktu_lama_instruksi` ,
-													`paraf_kasi` ,
-													`paraf_kajari` ,
-													`tujuan_disposisi` ,
-													`tgl_disposisi` ,
-													`catatan`,
-													`lampiran_foto`,
-													`lampiran_dokumen`,
-													) 
-						VALUES (NULL, '$id_surat_masuk', '$isi_instruksi', NOW(),'$batas_waktu', '$waktu_lama_instruksi', '$paraf_kasi', '$paraf_kajari', '$tujuan_disposisi', NOW() , '$catatan', '".$lampiran_foto['file_name']."' ,'".$lampiran_dokumen['file_name']."')");
+                `id_disposisi` ,
+                `id_surat_masuk` ,
+                `isi_instruksi` ,
+                `tgl_instruksi` ,
+                `batas_waktu` ,
+                `waktu_lama_instruksi` ,
+                `paraf_kasi` ,
+                `paraf_kajari` ,
+                `tujuan_disposisi` ,
+                `tgl_disposisi` ,
+                `catatan`,
+                `lampiran_foto`,
+                `lampiran_dokumen`
+            ) 
+            VALUES (NULL, '$id_surat_masuk', '$isi_instruksi', NOW(),'$batas_waktu', '$waktu_lama_instruksi', '$paraf_kasi', '$paraf_kajari', '$tujuan_disposisi', NOW() , '$catatan', '".$lampiran_foto['file_name']."' ,'".$lampiran_dokumen['file_name']."')");
             if ($queryDisposi) {
                 $kode_intruksi = $this->db->query("SELECT kode_intruksi FROM pelaksanaan_intruksi WHERE id = '$isi_instruksi'")->row();
                 if ($kode_intruksi->kode_intruksi == 1) {
@@ -144,7 +143,7 @@ class Disposisi extends CI_Controller
                 $lampiran_foto = $lampiran->lampiran_foto;
             }
             $this->db->query("UPDATE disposisi SET tujuan_disposisi = '$tujuan_disposisi', isi_instruksi = '$isi_instruksi', batas_waktu = '$batas_waktu', waktu_lama_instruksi = '$waktu_lama_instruksi',  paraf_kajari = '$paraf_kajari', paraf_kasi = '$paraf_kasi', catatan = '$catatan', lampiran_foto = '".$lampiran_foto."', lampiran_dokumen = '".$lampiran_dokumen."' WHERE id_disposisi = '$id_disposisi'");
-            if ($lampiran_dokumen && $lampiran_foto) {
+            if ($lampiran_dokumen) {
                 $this->db->query("UPDATE surat_masuk SET status_disposisi = '3' where id_surat_masuk ='$id_surat_masuk'");
             }
             $this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Disposisi berhasil diubah. </div>");

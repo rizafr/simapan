@@ -3,6 +3,7 @@
 class Klasifikasi_surat extends CI_Controller {
 	function __construct() {
 		parent::__construct();
+		$this->load->model('web_model');
 	}
 		
 	public function klas_surat() {
@@ -31,26 +32,38 @@ class Klasifikasi_surat extends CI_Controller {
 
 		//ambil variabel Postingan
 		$idp					= addslashes($this->input->post('idp'));
+		$kode					= addslashes($this->input->post('kode'));
 		$nama					= addslashes($this->input->post('nama'));
 		$uraian					= addslashes($this->input->post('uraian'));
 	
 		$cari					= addslashes($this->input->post('q'));
 
-		
+
 		if ($act == "cari") {
 			$a['data']		= $this->db->query("SELECT * FROM ref_klasifikasi WHERE nama LIKE '%$cari%' OR uraian LIKE '%$cari%' OR kode LIKE '%$cari%' ")->result();
 			$a['page']		= "referensi/l_klas_surat";
 			$a['cari']		=  $cari;
 		} else if ($act == "add") {
-			$a['page']		= "f_klas_surat";
+			$a['page']		= "referensi/f_klas_surat";
 		} else if ($act == "edt") {
-			$a['datpil']	= $this->db->query("SELECT * FROM ref_klasifikasi WHERE id = '$idu'")->row();	
+			$a['datpil']	= $this->db->query("SELECT * FROM ref_klasifikasi WHERE id = '$idu'")->row();
 			$a['page']		= "referensi/f_klas_surat";
 		} else if ($act == "act_edt") {
-			$this->db->query("UPDATE ref_klasifikasi SET nama = '$nama', uraian = '$uraian' WHERE id = '$idp'");
-			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil diubah</div>");			
+			$this->db->query("UPDATE ref_klasifikasi SET kode = '$kode',nama = '$nama', uraian = '$uraian' WHERE id = '$idp'");
+			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Data berhasil diubah</div>");
 			redirect('klasifikasi_surat/klas_surat');
-		} else {
+		}else if ($act == "act_add") {
+			$checkCode = $this->web_model->checkDuplicateCode($kode);
+			if ($checkCode) {
+				$this->db->query("INSERT INTO ref_klasifikasi VALUES (NULL, '$kode', '$nama', '$uraian') ");
+				$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id_surat_masuk=\"alert\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>Data berhasil ditambahkan </div>");
+				redirect('klasifikasi_surat/klas_surat');
+			} else {
+				$this->session->set_flashdata("k", "<div class=\"alert alert-danger\" id_surat_masuk=\"alert\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>Data gagal ditambahkan. Kode sudah ada </div>");
+				redirect('klasifikasi_surat/klas_surat/add');
+			}
+		}
+		else {
 			$a['data']		= $this->db->query("SELECT * FROM ref_klasifikasi LIMIT $awal, $akhir ")->result();
 			$a['page']		= "referensi/l_klas_surat";
 		}
@@ -91,7 +104,7 @@ class Klasifikasi_surat extends CI_Controller {
 		echo json_encode($klasifikasi);
 	}
 	
-	public function get_instansi_lain() {
+	public function get_instansi_pengirim() {
 		$kode 				= trim($this->input->post('kode', TRUE));
 		
 		$data 				=  $this->db->query("SELECT instansi FROM pengirim WHERE instansi LIKE '$kode%'")->result();

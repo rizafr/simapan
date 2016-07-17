@@ -7,7 +7,6 @@ class Manajemen_perkara extends CI_Controller {
 	}
 	
 	
-	
 	public function perkara() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
 			$this->session->set_flashdata("k", "<div id=\"alert\" class=\"alert alert-error\">Maaf Anda belum login. Silakan login terlebih dahulu</div>");

@@ -61,7 +61,7 @@ class Pengaturan extends CI_Controller {
 		}
 		
 		/* pagination */	
-		$total_row		= $this->db->query("SELECT * FROM t_admin")->num_rows();
+		$total_row		= $this->db->query("SELECT * FROM pengguna")->num_rows();
 		$per_page		= 15000;
 		
 		$awal	= mysql_real_escape_string($this->uri->segment(4)); 

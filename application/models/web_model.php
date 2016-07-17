@@ -1,5 +1,41 @@
 <?php
 class Web_model extends CI_Model {
+	function __construct()
+	{
+		parent::__construct();
+	}
+	
+	function read($db)
+	{
+		$get = $this->db->get($db);
+
+		return $get->result();
+	}
+
+	function insert($tabel,$data)
+	{
+		$this->db->insert($tabel,$data);
+	}
+
+	function update($id,$trig,$data,$tabel)
+	{
+		$this->db->where($trig,$id);
+		$this->db->update($tabel,$data);
+	}
+
+	function delete($id,$trig,$tabel)
+	{
+		$this->db->where($trig,$id);
+		$this->db->delete($tabel);
+	}
+
+	function get_spesific($id,$triger,$table)
+	{
+		$this->db->where($triger,$id);
+		$get = $this->db->get($table);
+
+		return $get->row();
+	}
 
 	function getAll($tabel) {
 		$q = $this->db->query("SELECT * FROM $tabel");
@@ -36,21 +72,7 @@ class Web_model extends CI_Model {
 		return $q;
 	}
 	
-	//qhususon...
-	#memilih jaksa
-    function get_dropdown_list() {
-        $this->db->from('jaksa');
-        $this->db->order_by('nama_jaksa', 'asc');
-        $result = $this->db->get();
-        $return = array();
-        if ($result->num_rows() > 0) {
-            $return[''] = "--Pilih Jaksa--";
-            foreach ($result->result_array() as $row) {
-                $return[$row['id_jaksa']] = $row['nama_jaksa'];
-            }
-        }
-        return $return;
-    }
+
 	
 	#memilih level
     function get_level_list() {
@@ -69,57 +91,7 @@ class Web_model extends CI_Model {
 	
 	
 	
-	//berita
-	function getBeritaAll() {
-		$q = $this->db->query("SELECT * FROM berita WHERE kategori = '1'");
-		return $q->result();
-	}
-	function getBerita($id) {
-		$q = $this->db->query("SELECT * FROM berita WHERE kategori = '1' AND idBerita = '$id'");
-		return $q->row();
-	}
-	function addBerita($data) {
-		$q = $this->db->insert('berita', $data);
-		return $q;
-	}
-	function editBerita($id, $data) {
-		$this->db->where('idBerita', $id);
-		$q = $this->db->update('berita', $data);
-		return $q;
-	}
-	function delBerita($id) {
-		$q = $this->db->query("DELETE FROM berita WHERE idBerita = '$id'");
-		return $q;
-	}
-	function pubBerita($id) {
-		$q = $this->db->query("UPDATE berita SET publish = '1' WHERE idBerita = '$id'");
-		return $q;
-	}
-	function unPubBerita($id) {
-		$q = $this->db->query("UPDATE berita SET publish = '0' WHERE idBerita = '$id'");
-		return $q;
-	}	
-	
-	//pengumuman	
 
-	function getPengumumanAll() {
-		$q = $this->db->query("SELECT * FROM berita WHERE kategori = '2'");
-		return $q->result();
-	}
-	function getPengumuman($id) {
-		$q = $this->db->query("SELECT * FROM berita WHERE kategori = '2' AND idBerita = '$id'");
-		return $q->row();
-	}
-	function addPengumuman($data) {
-		$q = $this->db->insert('berita', $data);
-		return $q;
-	}
-	function editPengumuman($id, $data) {
-		$this->db->where('idBerita', $id);
-		$q = $this->db->update('berita', $data);
-		return $q;
-	}
-	
 	
 	
 	function getFieldTable($tabel, $field, $id, $id_value) {
@@ -139,30 +111,24 @@ class Web_model extends CI_Model {
 		return $q;
 	}
 	
-	//Galeri 
-	function getKategoriGaleri() {
-		$q 	= $this->db->query("select * from galeriKategori");
-		return $q->result();
-	}
-	function addAlbum($data) {
-		$q = $this->db->insert('galerikategori', $data);
-		return $q;
-	}
-	function getFileFoto($idAlbum) {
-		$q 	= $this->db->query("select file from galeri where kategori = '".$idAlbum."' ");
-		return $q->result();
-	}
-	function editNamaAlbum($id, $data) {
-		$this->db->where('idKategori', $id);
-		$q = $this->db->update('galerikategori', $data);
-		return $q;
-	}
-	function uploadFoto($data) {
-		$q = $this->db->insert('galeri', $data);
-		return $q;
-	}
-	
+
 		//qhususon...
+	public function checkDuplicateCode($kode) {
+
+		$this->db->where('kode', $kode);
+
+		$query = $this->db->get('ref_klasifikasi');
+
+		$count_row = $query->num_rows();
+
+		if ($count_row > 0) {
+			//if count row return any row; that means you have already this email address in the database. so you must set false in this sense.
+			return FALSE; // here I change TRUE to false.
+		} else {
+			// doesn't return any row means database doesn't have this email
+			return TRUE; // And here false to TRUE
+		}
+	}
 	
 	public function validate(){
         // grab user input
@@ -195,6 +161,26 @@ class Web_model extends CI_Model {
         return false;
     }
 
+	public function getCountSuratMasuk() {
+		$query = $this->db->get('surat_masuk');
+
+		return $query->num_rows();
+	}
+
+	public function getCountSuratMasukNotReported() {
+		$this->db->get('surat_masuk');
+		$this->db->where('status_disposisi', '2');
+		$query = $this->db->get('surat_masuk');
+		return $query->num_rows();
+	}
+
+	public function getCountSuratMasukSelesai() {
+		$this->db->get('surat_masuk');
+		$this->db->where('status_disposisi', '3');
+		$query = $this->db->get('surat_masuk');
+
+		return $query->num_rows();
+	}
+
 	
 }
-?>

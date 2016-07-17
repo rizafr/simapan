@@ -5,8 +5,8 @@ if ($mode == "edt" || $mode == "act_edt") {
     $act = "act_edt";
     $id_surat_masuk = $datpil->id_surat_masuk;
     $no_agenda = $datpil->no_agenda;
-    $tgl_diterima = tgl_jam_sql($datpil->tgl_diterima);
-    $tgl_penyelesaian = tgl_jam_sql($datpil->tgl_penyelesaian);
+    $tgl_diterima = $datpil->tgl_diterima;
+    $tgl_penyelesaian = $datpil->tgl_penyelesaian;
     $pengirim = $datpil->pengirim;
     $kode_surat_masuk = $datpil->kode_surat_masuk;
     $asal_surat_masuk = $datpil->asal_surat_masuk;
@@ -67,28 +67,20 @@ if ($mode == "edt" || $mode == "act_edt") {
                 <tr>
                     <td width="20%">Tanggal Surat</td>
                     <td>
-                        <b><input type="text" name="tgl_surat_masuk" tabindex="3" required
-                                  value="<?php echo $tgl_surat_masuk; ?>" id="tgl_surat_masuk" style="width: 100px"
-                                  class="form-control"></b>
+                        <b><input type="text" name="tgl_surat_masuk" tabindex="3" required value="<?php echo $tgl_surat_masuk; ?>" id="tgl_surat_masuk" style="width: 100px" class="form-control"></b>
                     </td>
                 </tr>
                 <tr>
                     <td width="20%">Sifat</td>
                     <td>
-                        <select name="status_surat_masuk" class="form-control" style="width: 200px"
-                                required tabindex="4">
-                            <option value=""> - Status Surat -</option>
-                            <?php
-                            $l_status_surat_masuk = array('Biasa', 'Penting', 'Rahasia', 'Segera', 'Sangat Segera');
-
-                            for ($i = 0; $i < sizeof($l_status_surat_masuk); $i++) {
-                                if ($l_status_surat_masuk[$i] == $status_surat_masuk) {
-                                    echo "<option selected value='" . $l_status_surat_masuk[$i] . "'>" . $l_status_surat_masuk[$i] . "</option>";
-                                } else {
-                                    echo "<option value='" . $l_status_surat_masuk[$i] . "'>" . $l_status_surat_masuk[$i] . "</option>";
-                                }
-                            }
-                            ?>
+                        <select name="status_surat_masuk" class="col-md-12" required>
+                            <option value="">--Pilih--</option>
+                            <?php foreach ($ref_sifat_surat as $ref_sifat_surat) { ?>
+                                <option
+                                    value="<?php echo $ref_sifat_surat->deskripsi ?>" <?php echo $ref_sifat_surat->deskripsi == $status_surat_masuk ? 'selected' : ''; ?>>
+                                    <?php echo $ref_sifat_surat->deskripsi ?>
+                                </option>
+                            <?php } ?>
                         </select>
                     </td>
                 </tr>
@@ -96,8 +88,7 @@ if ($mode == "edt" || $mode == "act_edt") {
                 <tr>
                     <td width="20%">Perihal</td>
                     <td>
-                        <b><textarea name="perihal_surat_masuk" tabindex="5" required style="width: 400px; height: 90px"
-                                     class="form-control"><?php echo $perihal_surat_masuk; ?></textarea></b>
+                        <b><textarea name="perihal_surat_masuk" tabindex="5" style="width: 400px; height: 90px" class="form-control"><?php echo $perihal_surat_masuk; ?></textarea></b>
                     </td>
                 </tr>
             </table>
@@ -108,42 +99,33 @@ if ($mode == "edt" || $mode == "act_edt") {
                 <tr>
                     <td width="20%">Kode Surat</td>
                     <td>
-                        <b><input type="text" name="kode_surat_masuk" tabindex="6" id="kode_surat_masuk" required
-                                  value="<?php echo $kode_surat_masuk; ?>" style="width: 100px"
-                                  class="form-control"></b>
+                        <b><input type="text" name="kode_surat_masuk" tabindex="6" id="kode_surat_masuk" value="<?php echo $kode_surat_masuk; ?>" style="width: 100px" class="form-control"></b>
                     </td>
                 </tr>
                 <tr>
                     <td width="20%">Pengirim</td>
                     <td>
-                        <b><input id="pengirim" type="text" name="asal_surat_masuk" tabindex="7" required
-                                  value="<?php echo $asal_surat_masuk; ?>" id="asal_surat_masuk" style="width: 400px"
-                                  class="form-control"></b>
+                        <b><input id="pengirim" type="text" name="asal_surat_masuk" tabindex="7" required value="<?php echo $asal_surat_masuk; ?>" id="asal_surat_masuk" style="width: 400px" class="form-control"></b>
                     </td>
                 </tr>
                 <tr>
                     <td width="20%">Nomor Surat</td>
                     <td>
-                        <b><input type="text" name="no_surat_masuk" tabindex="8" required
-                                  value="<?php echo $no_surat_masuk; ?>" id="no_surat_masuk" style="width: 300px"
-                                  class="form-control"></b>
+                        <b><input type="text" name="no_surat_masuk" tabindex="8" required value="<?php echo $no_surat_masuk; ?>" id="no_surat_masuk" style="width: 300px" class="form-control"></b>
                     </td>
                 </tr>
 
                 <tr>
                     <td width="20%">Tanggal Penyelesaian</td>
                     <td>
-                        <b><input type="text" name="tgl_penyelesaian" class="tgl" tabindex="9" required
-                                  value="<?php echo $tgl_penyelesaian; ?>" style="width: 100px"
-                                  class="form-control"></b>
+                        <b><input type="text" name="tgl_penyelesaian" class="tgl" tabindex="9" value="<?php echo $tgl_penyelesaian; ?>" style="width: 100px" class="form-control"></b>
                     </td>
                 </tr>
                 <tr>
                     <td width="20%">File Surat (Scan)</td>
                     <td>
                         <b>
-                            <input type="file" name="lampiran" tabindex="10" class="form-control"
-                                   style="width: 100%"></b>
+                            <input type="file" name="lampiran" tabindex="10" class="form-control" style="width: 100%"></b>
                         <br/>
                         <?php
                         if ($lampiran) {
@@ -155,8 +137,7 @@ if ($mode == "edt" || $mode == "act_edt") {
                 <tr>
                     <td width="20%">Keterangan</td>
                     <td>
-                        <b><input type="text" name="keterangan" value="<?php echo $keterangan; ?>"
-                                  style="width: 400px" class="form-control" tabindex="11"></b>
+                        <b><input type="text" name="keterangan" value="<?php echo $keterangan; ?>" style="width: 400px" class="form-control" tabindex="11"></b>
                     </td>
                 </tr>
             </table>
@@ -166,16 +147,15 @@ if ($mode == "edt" || $mode == "act_edt") {
                 <div class="right mt25">
                         <a href="<?php echo base_URL(); ?>surat_masuk/masuk" class="btn btn-success"
                            tabindex="11"><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
-                        <button type="submit" class="btn btn-primary"><i
-                                class="icon icon-ok icon-white"></i> Simpan
+                        <button type="submit" class="btn btn-primary">
+                            <i class="icon icon-ok icon-white"></i> Simpan
                         </button>
                 </div>
             </div>
         </div>
-
     </div>
-
 </form>
+
 <script type="text/javascript">
     $(function () {
         $("#tgl_surat_masuk").datepicker({

@@ -22,8 +22,10 @@ class Crud_ref_disposisi extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('ref_disposisi');
+        $this->db->order_by("tujuan_disposisi", "asc");
         $query = $this->db->get();
 
         return $query->result();
     }
+
 }

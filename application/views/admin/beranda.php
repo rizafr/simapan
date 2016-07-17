@@ -25,7 +25,7 @@
 						<h1><?php echo $this->session->userdata('admin_nama'); ?></h1>
 						<p>Level : <?php echo $this->session->userdata('admin_level');?></p>
 						<a href="#">
-							<img src="<?php echo base_url(); ?>aset/img/profile-avatar.jpg" alt="">
+							<img src="<?php echo base_url(); ?>aset/img/agus.JPG" alt="">
 						</a>
 					</div>
 					<div class="weather-category twt-category">
@@ -43,7 +43,7 @@
 								Followers
 							</li>
 						</ul>
-					</div>					
+					</div>
 				</section>
 				<!--widget end-->
 			</div>
@@ -56,7 +56,7 @@
 							<i class=" icon-envelope"></i>
 						</div>
 						<div class="value">
-							<h1 class="count">
+							<h1 class="countSuratMasuk">
 								0
 							</h1>
 							<p>Surat Masuk</p>
@@ -69,36 +69,38 @@
 							<i class=" icon-envelope"></i>
 						</div>
 						<div class="value">
-							<h1 class=" count2">
+							<h1 class="countSuratKeluar">
 								0
 							</h1>
 							<p>Surat Keluar</p>
 						</div>
 					</section>
 				</div>
+
 				<div class="col-lg-3 col-sm-6">
 					<section class="panel">
-						<div class="symbol yellow">
-							<i class="icon-bell-alt"></i>
+						<div class="symbol red">
+							<i class=" icon-envelope"></i>
 						</div>
 						<div class="value">
-							<h1 class=" count3">
-								0
+							<h1 class="countSuratMasukSelesai">
+								<?= $countSuratMasukSelesai?>
 							</h1>
-							<p>Proses Perkara</p>
+							<p>Surat Selesai</p>
 						</div>
 					</section>
 				</div>
+
 				<div class="col-lg-3 col-sm-6">
 					<section class="panel">
-						<div class="symbol blue">
-							<i class="icon-bell-alt"></i>
+						<div class="symbol red">
+							<i class=" icon-envelope"></i>
 						</div>
 						<div class="value">
-							<h1 class=" count4">
-								0
+							<h1 class=" countSuratMasukNotReported">
+								<?= $countSuratMasukNotReported?>
 							</h1>
-							<p>Proses Penahanan</p>
+							<p>Surat Belum Ada Laporan</p>
 						</div>
 					</section>
 				</div>
@@ -119,12 +121,6 @@
 								</li>
 								<li class="">
 									<a data-toggle="tab" href="#about">Surat Keluar</a>
-								</li>
-								<li class="">
-									<a data-toggle="tab" href="#profile">Posisi Penahanan</a>
-								</li>
-								<li class="">
-									<a data-toggle="tab" href="#contact">Posisi Perkara</a>
 								</li>
 							</ul>
 						</header>
@@ -466,121 +462,13 @@
 				</div>
 			</div>
 			<br />
-			<div class="row">
-				<div class="col-lg-12">
-					<!--timeline start-->
-					<section class="panel wow slideInLeft" data-wow-duration="3s">
-						<header class="panel-heading">
-							Jadwal Sidang
-							<span class="tools pull-right">
-                                <a class="icon-chevron-down" href="javascript:;"></a>
-                                <a class="icon-remove" href="javascript:;"></a>
-							</span>
-						</header>
-						<div class="panel-body">
-							<div class="timeline">
-								<article class="timeline-item">
-									<div class="timeline-desk">
-										<div class="panel">
-											<div class="panel-body">
-												<span class="arrow"></span>
-												<span class="timeline-icon red"></span>
-												<span class="timeline-date">08:25 am</span>
-												<h1 class="red">12 July | Sunday</h1>
-												<p>Lorem ipsum dolor sit amet consiquest dio</p>
-											</div>
-										</div>
-									</div>
-								</article>
-								<article class="timeline-item alt">
-									<div class="timeline-desk">
-										<div class="panel">
-											<div class="panel-body">
-												<span class="arrow-alt"></span>
-												<span class="timeline-icon green"></span>
-												<span class="timeline-date">10:00 am</span>
-												<h1 class="green">10 July | Wednesday</h1>
-												<p><a href="#">Jonathan Smith</a> added new milestone <span><a href="#" class="green">ERP</a></span></p>
-											</div>
-										</div>
-									</div>
-								</article>
-								<article class="timeline-item">
-									<div class="timeline-desk">
-										<div class="panel">
-											<div class="panel-body">
-												<span class="arrow"></span>
-												<span class="timeline-icon blue"></span>
-												<span class="timeline-date">11:35 am</span>
-												<h1 class="blue">05 July | Monday</h1>
-												<p><a href="#">Anjelina Joli</a> added new album <span><a href="#" class="blue">PARTY TIME</a></span></p>
-												<div class="album">
-													<a href="#">
-														<img src="<?php echo base_url(); ?>aset/img/sm-img-1.jpg">
-													</a>
-													<a href="#">
-														<img src="<?php echo base_url(); ?>aset/img/sm-img-2.jpg">
-													</a>
-													<a href="#">
-														<img src="<?php echo base_url(); ?>aset/img/sm-img-3.jpg">
-													</a>
-													<a href="#">
-														<img src="<?php echo base_url(); ?>aset/img/sm-img-1.jpg">
-													</a>
-													<a href="#">
-														<img alt="" src="<?php echo base_url(); ?>aset/img/sm-img-2.jpg">
-													</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</article>
-								<article class="timeline-item alt">
-									<div class="timeline-desk">
-										<div class="panel">
-											<div class="panel-body">
-												<span class="arrow-alt"></span>
-												<span class="timeline-icon purple"></span>
-												<span class="timeline-date">3:20 pm</span>
-												<h1 class="purple">29 June | Saturday</h1>
-												<p>Lorem ipsum dolor sit amet consiquest dio</p>
-												<div class="notification">
-													<i class=" icon-exclamation-sign"></i> New task added for <a href="#">Denial Collins</a>
-												</div>
-											</div>
-										</div>
-									</div>
-								</article>
-								<article class="timeline-item">
-									<div class="timeline-desk">
-										<div class="panel">
-											<div class="panel-body">
-												<span class="arrow"></span>
-												<span class="timeline-icon light-green"></span>
-												<span class="timeline-date">07:49 pm</span>
-												<h1 class="light-green">10 June | Friday</h1>
-												<p><a href="#">Jonatha Smith</a> added new milestone <span><a href="#" class="light-green">prank</a></span> Lorem ipsum dolor sit amet consiquest dio</p>
-											</div>
-										</div>
-									</div>
-								</article>
-							</div>
-							
-							<div class="clearfix">&nbsp;</div>
-						</div>
-					</section>
-					<!--timeline end-->
-				</div>
-				
-			</div>
-			
+
 		</section>
 	</section>
 </div>
 <script type="text/javascript">
 	
 	$(document).ready(function () {
-		
 		
 		$(function () {
 			$('#grafik').highcharts({
@@ -594,7 +482,7 @@
 				},
 				xAxis: {
 					categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-					'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+						'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
 				},
 				yAxis: {
 					title: {
@@ -617,19 +505,137 @@
 				},
 				series: [{
 					name: 'Surat Masuk',
-					data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-					}, {
+					data: [<?= $countSuratMasuk?>]
+				}, {
 					name: 'Surat Keluar',
-				data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-				}, {
-				name: 'Proses Perkara',
-				data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-				}, {
-				name: 'Proses Penahanan',
-				data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
+					data: [0]
 				}]
+			});
+		});
+
+		function countUp(count)
+		{
+			var div_by = 100,
+				speed = Math.round(count / div_by),
+				$display = $('.countSuratMasuk'),
+				run_count = 1,
+				int_speed = 24;
+
+			var int = setInterval(function() {
+				if(run_count < div_by){
+					$display.text(speed * run_count);
+					run_count++;
+				} else if(parseInt($display.text()) < count) {
+					var curr_count = parseInt($display.text()) + 1;
+					$display.text(curr_count);
+				} else {
+					clearInterval(int);
+				}
+			}, int_speed);
+		}
+
+		countUp(<?= $countSuratMasuk?>);
+
+		function countUpSuratMasukSelesai(count)
+		{
+			var div_by = 100,
+				speed = Math.round(count / div_by),
+				$display = $('.countSuratmasukSelesai'),
+				run_count = 1,
+				int_speed = 24;
+
+			var int = setInterval(function() {
+				if(run_count < div_by){
+					$display.text(speed * run_count);
+					run_count++;
+				} else if(parseInt($display.text()) < count) {
+					var curr_count = parseInt($display.text()) + 1;
+					$display.text(curr_count);
+				} else {
+					clearInterval(int);
+				}
+			}, int_speed);
+		}
+
+		countUpSuratMasukSelesai(<?= $countSuratMasukSelesai?>);
+
+		function countUpSuratMasukNotReported(count)
+		{
+			var div_by = 100,
+				speed = Math.round(count / div_by),
+				$display = $('.countSuratMasukNotReported'),
+				run_count = 1,
+				int_speed = 24;
+
+			var int = setInterval(function() {
+				if(run_count < div_by){
+					$display.text(speed * run_count);
+					run_count++;
+				} else if(parseInt($display.text()) < count) {
+					var curr_count = parseInt($display.text()) + 1;
+					$display.text(curr_count);
+				} else {
+					clearInterval(int);
+				}
+			}, int_speed);
+		}
+
+		countUpSuratMasukNotReported(<?= $countSuratMasukNotReported; ?>);
+
+		function countUp4(count)
+		{
+			var div_by = 100,
+				speed = Math.round(count / div_by),
+				$display = $('.count4'),
+				run_count = 1,
+				int_speed = 24;
+
+			var int = setInterval(function() {
+				if(run_count < div_by){
+					$display.text(speed * run_count);
+					run_count++;
+				} else if(parseInt($display.text()) < count) {
+					var curr_count = parseInt($display.text()) + 1;
+					$display.text(curr_count);
+				} else {
+					clearInterval(int);
+				}
+			}, int_speed);
+		}
+
+		countUp4(5328);
+
+
+//SCROLL TO TOP----------------------------------------------------
+		$(document).ready(function(){
+
+			// hide #back-top first
+			$(".go-top").hide();
+
+			// fade in #back-top
+			$(function () {
+				$(window).scroll(function () {
+					if ($(this).scrollTop() > 100) {
+						$('.go-top').fadeIn();
+					} else {
+						$('.go-top').fadeOut();
+					}
 				});
+
+				// scroll body to 0px on click
+				$('.go-top').click(function () {
+					$('body,html').animate({
+						scrollTop: 0
+					}, 600);
+					return false;
 				});
-				});
-				</script>
-				<?php $this->load->view('admin/notifikasi/notifikasi'); ?>				
+			});
+
+		});
+
+
+	});
+	</script>
+<?php if($countSuratMasukNotReported > 0) {
+	$this->load->view('admin/notifikasi/notifikasi', $countSuratMasukNotReported);
+ } ?>

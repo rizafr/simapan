@@ -3,6 +3,7 @@
 class Admin extends CI_Controller {
 	function __construct() {
 		parent::__construct();
+		$this->load->model('web_model');
 	}
 	
 	public function index() {
@@ -12,7 +13,9 @@ class Admin extends CI_Controller {
 		}
 		
 		$a['page']	= "beranda";
-		
+		$a['countSuratMasuk']	= $this->web_model->getCountSuratMasuk();
+		$a['countSuratMasukSelesai']	= $this->web_model->getCountSuratMasukSelesai();
+		$a['countSuratMasukNotReported']	= $this->web_model->getCountSuratMasukNotReported();
 		$this->load->view('admin/index', $a);
 	}
 

@@ -92,7 +92,6 @@
 								}    
 							});
 						},
-						minLength: 2,
 						autofocus: true
 					});
 				});
@@ -110,7 +109,6 @@
 								}    
 							});
 						},
-						minLength: 2,
 						autofocus: true
 					});
 				});
@@ -119,7 +117,7 @@
 					$( "#pengirim" ).autocomplete({
 						source: function(request, response) {
 							$.ajax({ 
-								url: "<?php echo site_url('klasifikasi_surat/get_instansi_lain'); ?>",
+								url: "<?php echo site_url('klasifikasi_surat/get_instansi_pengirim'); ?>",
 								data: { kode: $("#pengirim").val()},
 								dataType:"json",
 								cache: false,
@@ -129,7 +127,6 @@
 								}    
 							});
 						},
-						minLength: 2,
 						autofocus: true
 					});
 				});

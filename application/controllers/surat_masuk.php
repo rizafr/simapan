@@ -4,6 +4,7 @@ class Surat_masuk extends CI_Controller {
 	function __construct() {
 		parent::__construct();
 		$this->load->library('breadcrumbs');
+		$this->load->model('crud_sifat_surat');
 	}
 	
 	public function index() {
@@ -51,7 +52,7 @@ class Surat_masuk extends CI_Controller {
 		$status_surat_masuk		= addslashes($this->input->post('status_surat_masuk'));
 		$tgl_surat_masuk		= addslashes($this->input->post('tgl_surat_masuk'));
 		$tgl_penyelesaian		= addslashes($this->input->post('tgl_penyelesaian'));
-		$tgl_diterima		= addslashes($this->input->post('tgl_diterima'));
+		$tgl_diterima			= addslashes($this->input->post('tgl_diterima'));
 		$perihal_surat_masuk	= addslashes($this->input->post('perihal_surat_masuk'));
 		$keterangan				= addslashes($this->input->post('keterangan'));
 		$status_disposisi		= addslashes($this->input->post('status_disposisi'));
@@ -78,7 +79,7 @@ class Surat_masuk extends CI_Controller {
 			$this->breadcrumbs->push('Beranda', '/admin');
 			$this->breadcrumbs->push('Surat Masuk', '/surat_masuk/masuk');
 			$this->breadcrumbs->push('Tambah', '/surat_masuk/f_surat_masuk/');
-
+			$a['ref_sifat_surat'] = $this->crud_sifat_surat->get_all_sifat_surat();
 			$a['page']		= "surat_masuk/f_surat_masuk";
 		} else if ($act == "edt") {
 			$a['datpil']	= $this->db->query("SELECT * FROM surat_masuk WHERE id_surat_masuk = '$idu'")->row();
@@ -86,6 +87,7 @@ class Surat_masuk extends CI_Controller {
 			$this->breadcrumbs->push('Surat Masuk', '/surat_masuk/masuk');
 			$this->breadcrumbs->push('Ubah', '/surat_masuk/f_surat_masuk/');
 
+			$a['ref_sifat_surat'] = $this->crud_sifat_surat->get_all_sifat_surat();
 			$a['page']		= "surat_masuk/f_surat_masuk";
 		} else if ($act == "act_add") {	
 			if ($this->upload->do_upload('lampiran')) {
@@ -102,9 +104,9 @@ class Surat_masuk extends CI_Controller {
 			if ($this->upload->do_upload('lampiran')) {
 				$up_data	 	= $this->upload->data();
 							
-				$this->db->query("UPDATE surat_masuk SET kode_surat_masuk = '$kode_surat_masuk', no_surat_masuk = '$no_surat_masuk', asal_surat_masuk = '$asal_surat_masuk', tgl_surat_masuk = '$tgl_surat_masuk', tgl_penyelesaian = '$tgl_penyelesaian', status_surat_masuk = '$status_surat_masuk', perihal_surat_masuk = '$perihal_surat_masuk', no_agenda = '$no_agenda', keterangan = '$keterangan', lampiran = '".$up_data['file_name']."' WHERE id_surat_masuk = '$id_surat_masuk'");
+				$this->db->query("UPDATE surat_masuk SET kode_surat_masuk = '$kode_surat_masuk', no_surat_masuk = '$no_surat_masuk', asal_surat_masuk = '$asal_surat_masuk', tgl_diterima = '$tgl_diterima', tgl_surat_masuk = '$tgl_surat_masuk', tgl_penyelesaian = '$tgl_penyelesaian', status_surat_masuk = '$status_surat_masuk', perihal_surat_masuk = '$perihal_surat_masuk', no_agenda = '$no_agenda', keterangan = '$keterangan', lampiran = '".$up_data['file_name']."' WHERE id_surat_masuk = '$id_surat_masuk'");
 			} else {
-				$this->db->query("UPDATE surat_masuk SET kode_surat_masuk = '$kode_surat_masuk', no_surat_masuk = '$no_surat_masuk', asal_surat_masuk = '$asal_surat_masuk', tgl_surat_masuk = '$tgl_surat_masuk', tgl_penyelesaian = '$tgl_penyelesaian' , status_surat_masuk = '$status_surat_masuk', perihal_surat_masuk = '$perihal_surat_masuk', no_agenda = '$no_agenda', keterangan = '$keterangan' WHERE id_surat_masuk = '$id_surat_masuk'");
+				$this->db->query("UPDATE surat_masuk SET kode_surat_masuk = '$kode_surat_masuk', no_surat_masuk = '$no_surat_masuk', asal_surat_masuk = '$asal_surat_masuk',tgl_diterima = '$tgl_diterima', tgl_surat_masuk = '$tgl_surat_masuk', tgl_penyelesaian = '$tgl_penyelesaian' , status_surat_masuk = '$status_surat_masuk', perihal_surat_masuk = '$perihal_surat_masuk', no_agenda = '$no_agenda', keterangan = '$keterangan' WHERE id_surat_masuk = '$id_surat_masuk'");
 			}	
 			
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id_surat_masuk=\"alert\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a> Data berhasil diubah. ".$this->upload->display_errors()."</div>");

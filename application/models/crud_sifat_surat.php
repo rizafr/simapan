@@ -11,18 +11,18 @@
  *
  * @author Sumapala Technologies
  */
-class Crud_intruksi extends CI_Model
+class Crud_sifat_surat extends CI_Model
 {
     function __construct()
     {
         parent::__construct();
     }
 
-    function get_all_instruksi()
+    function get_all_sifat_surat()
     {
         $this->db->select('*');
-        $this->db->from('pelaksanaan_intruksi');
-        $this->db->order_by("intruksi", "asc");
+        $this->db->from('ref_sifat_surat');
+        $this->db->order_by("deskripsi", "asc");
         $query = $this->db->get();
 
         return $query->result();

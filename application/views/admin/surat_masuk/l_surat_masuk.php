@@ -146,7 +146,7 @@
 <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
         $('#suratMasuk').dataTable({
-            "aaSorting": [[2, "asc"]]
+            "aaSorting": [[0, "desc"]]
         });
     });
 </script>
