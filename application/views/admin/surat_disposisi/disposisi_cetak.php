@@ -4,7 +4,7 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 
 <html>
 <head>
-	<title> SIAPRA -  <?php echo $datpil1->no_agenda; ?> (<?php echo $datpil1->asal_surat_masuk ."_".tgl_jam_sql($datpil1->tgl_surat_masuk)?>) </title>
+	<title> SIMAPAN -  <?= $datpil1->no_agenda; ?> (<?= $datpil1->asal_surat_masuk ." : ".$datpil1->perihal_surat_masuk; ?>) </title>
 <style type="text/css" media="print">
 	body{font-family: tahoma}
 	.border {border: solid 1px #000 ; border-collapse: collapse; width: 100%}
@@ -33,7 +33,11 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 	</td>
 	</tr>
 	
-	<tr><td colspan="3" align="center" style="padding: 15px 0"><b style="font-size: 21px;"><u>LEMBAR DISPOSISI</u></b></td></tr>
+	<tr>
+	<td colspan="3" align="center" style="padding: 15px 0">
+	<b style="font-size: 21px;"><u>LEMBAR DISPOSISI</u></b>
+	</td>
+	</tr>
 	
 	<tr><td></td><td></td>
 	<td  colspan="4"><b align="right">SIFAT SURAT</b>: <?php echo $datpil1->status_surat_masuk; ?></td></tr>

@@ -36,6 +36,7 @@
                     <th width="7.5%">Sifat Surat</th>
                     <th width="5%">Tgl. Penyelesaian</th>
                     <th width="7.5%">Status Disposisi</th>
+                    <th width="7.5%">Keterangan</th>
                     <th width="25%">Aksi</th>
                 </tr>
                 </thead>
@@ -109,6 +110,9 @@
                                 <span class="label <?= $btn?>">
                                     <span class="<?= $icon; ?> icon-white"></span> <?php echo  $disposisi[$b->status_disposisi]; ?>
                                 </span>
+                            </td>
+                            <td>
+                                <?= $b->keterangan?>
                             </td>
 
                             <td>

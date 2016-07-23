@@ -21,28 +21,14 @@
 				<!--widget start-->
 				<section class="panel wow slideInLeft" data-wow-duration="2s">
 					<div class="twt-feed blue-bg">
-						<h2>Selamat datang</h2>
-						<h1><?php echo $this->session->userdata('admin_nama'); ?></h1>
-						<p>Level : <?php echo $this->session->userdata('admin_level');?></p>
+						<h2>Selamat datang</h2>						
 						<a href="#">
 							<img src="<?php echo base_url(); ?>aset/img/agus.JPG" alt="">
 						</a>
 					</div>
-					<div class="weather-category twt-category">
-						<ul>
-							<li class="active">
-								<h5>320</h5>
-								Tweet
-							</li>
-							<li>
-								<h5>1245</h5>
-								Following
-							</li>
-							<li>
-								<h5>24657</h5>
-								Followers
-							</li>
-						</ul>
+					<div class="weather-category twt-category ctr">
+						<h2><?php echo $this->session->userdata('admin_nama'); ?></h2>
+						<p>Level : <?php echo $this->session->userdata('admin_level');?></p>
 					</div>
 				</section>
 				<!--widget end-->

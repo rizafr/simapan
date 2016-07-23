@@ -14,13 +14,19 @@
 	<tr><td width="20%">Dari Tanggal</td><td><b><input type="text" name="tgl_start" id="tgl_start" class="form-control" style="width: 150px" required></b></td></tr>		
 	<tr><td width="20%">Sampai Tanggal</td><td><b><input type="text" name="tgl_end" id="tgl_end" class="form-control" style="width: 150px"  required></b></td></tr>	
 	
-	<tr><td colspan="2">
-		<br>
-		<button type="submit" class="btn btn-primary"><i class="icon icon-print icon-white"></i> Cetak</button>
-		<a href="<?php echo base_URL(); ?>index.php/admin" class="btn btn-success"><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
-	</td></tr>
 	</table>
 	</fieldset>
+	 <div class="row ">
+            <div class="col-lg-12">
+                <div class="right mt25">
+                        <a href="<?php echo base_URL(); ?>admin" class="btn btn-success"
+                           tabindex="11"><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="icon icon-print icon-white"></i> Cetak
+                        </button>
+                </div>
+            </div>
+        </div>
 </form>
 </div>
 

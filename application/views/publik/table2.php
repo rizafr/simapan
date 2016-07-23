@@ -79,7 +79,9 @@
 						<th>No Agenda </th><th>Surat Masuk</th><th>Perihal</th><th>Sifat</th><th>Tanggal Diterima</th><th>Status</th></tr>
 					</thead>
 					<tbody>
-						<?php 						
+						<?php
+						 $disposisi = array("1" => "Register Aplikasi", "2" => "Belum ada laporan", "3" => "Selesai");
+
 							if (empty($data)) {
 								echo "<tr><td colspan='9'  style='text-align: center; font-weight: bold'>--Data tidak ditemukan--</td></tr>";
 							} 
@@ -113,24 +115,26 @@
 								
 							// 	$selisih = $jd2 - $jd1;
 								
-								if($b->status_disposisi == 0){
-									$warna ="danger";
-									$status = $selisih ." hari lagi";
-									$label ="label label-danger";
-								}
-								else if($b->status_disposisi == 1){
-									$warna =" success";
-									$status = "Disposisi Lurah";
-									$label ="label label-success";
-								}else if($b->status_disposisi == 2){
-									$warna ="info";
-									$status ="SELESAI";
-									$label ="label label-info ";
-								}
+								if ($b->status_disposisi == 1) {
+                                        $btn = "label-warning";
+                                        $icon = "icon-warning-sign";
+                                    }
+                                    elseif  ($b->status_disposisi == 2) {
+                                        $btn = "label-danger";
+                                        $icon = "icon-warning-sign";
+                                    }
+                                    elseif ($b->status_disposisi == 3) {
+                                        $btn = "label-success";
+                                        $icon = "icon-check-sign";
+                                    }
+                                    else {
+                                        $btn = "label-default";
+                                        $icon = "icon-warning-sign";
+                                    }
 								
 							?>
 							<tr class="danger">
-							<td class="danger"><?php echo $b->no_agenda;?></td><td><?php echo $b->asal_surat_masuk; ?></td><td><?php echo $b->perihal_surat_masuk?></td><td><?php echo $b->status_surat_masuk?></td><td><font color='blue'><?php echo tgl_jam_sql($b->tgl_diterima) ?></font></td><td><div class="<?php echo $label ?>"><?php echo $status ?></div></td>
+							<td class="danger"><?php echo $b->no_agenda;?></td><td><?php echo $b->asal_surat_masuk; ?></td><td><?php echo $b->perihal_surat_masuk?></td><td><?php echo $b->status_surat_masuk?></td><td><font color='blue'><?php echo tgl_jam_sql($b->tgl_diterima) ?></font></td><td><span class="label <?= $btn?>"><?php echo  $disposisi[$b->status_disposisi]; ?></span></td>
 							</tr>
 							<?php 
 							}

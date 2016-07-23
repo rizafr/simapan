@@ -62,7 +62,7 @@ if ($mode == "edt" || $mode == "act_edt") {
                 </tr>
                 <tr>
                     <td width="20%">Tgl. Diterima</td>
-                    <td><input type="text" name="tgl_diterima" autofocus tabindex="2" value="<?php echo $tgl_diterima; ?>" style="width: 120px" class="form-control tgl"></td>
+                    <td><input type="text" name="tgl_diterima" autofocus tabindex="2" value="<?php echo $tgl_diterima; ?>" style="width: 120px" class="form-control tgl" required></td>
                 </tr>
                 <tr>
                     <td width="20%">Tanggal Surat</td>
@@ -88,7 +88,7 @@ if ($mode == "edt" || $mode == "act_edt") {
                 <tr>
                     <td width="20%">Perihal</td>
                     <td>
-                        <b><textarea name="perihal_surat_masuk" tabindex="5" style="width: 400px; height: 90px" class="form-control"><?php echo $perihal_surat_masuk; ?></textarea></b>
+                        <b><textarea name="perihal_surat_masuk" tabindex="5" style="width: 400px; height: 90px" class="form-control" required><?php echo $perihal_surat_masuk; ?></textarea></b>
                     </td>
                 </tr>
             </table>
@@ -97,9 +97,9 @@ if ($mode == "edt" || $mode == "act_edt") {
         <div class="col-lg-6">
             <table class="table-form">
                 <tr>
-                    <td width="20%">Kode Surat</td>
+                    <td width="20%">Klasifikasi Surat</td>
                     <td>
-                        <b><input type="text" name="kode_surat_masuk" tabindex="6" id="kode_surat_masuk" value="<?php echo $kode_surat_masuk; ?>" style="width: 100px" class="form-control"></b>
+                        <b><input type="text" name="kode_surat_masuk" tabindex="6" id="kode_surat_masuk" value="<?php echo $kode_surat_masuk; ?>" style="width: 100px" class="form-control" required></b>
                     </td>
                 </tr>
                 <tr>
@@ -118,7 +118,7 @@ if ($mode == "edt" || $mode == "act_edt") {
                 <tr>
                     <td width="20%">Tanggal Penyelesaian</td>
                     <td>
-                        <b><input type="text" name="tgl_penyelesaian" class="tgl" tabindex="9" value="<?php echo $tgl_penyelesaian; ?>" style="width: 100px" class="form-control"></b>
+                        <b><input type="text" name="tgl_penyelesaian" class="tgl" tabindex="9" value="<?php echo $tgl_penyelesaian; ?>" style="width: 100px" class="form-control" required></b>
                     </td>
                 </tr>
                 <tr>

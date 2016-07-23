@@ -14,7 +14,7 @@ $bulan = $array_bulan[date('n')];
 //Format Tahun 
 $tahun = date('Y');
 
-$file_name = "DATA SURAT MASUK - " . $tanggal . " " . $bulan . " " . $tahun . ".xls";
+$filename = "DATA SURAT MASUK - " . $tanggal . " " . $bulan . " " . $tahun . ".xls";
 header("Expires: Mon, 26 Jul 2001 05:00:00 GMT");
 header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
 header("Cache-Control: no-store, no-cache, must-revalidate");
@@ -22,7 +22,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 header("Cache-control: private");
 header("Content-Type: application/vnd.ms-word; name='word'");
-header('Content-Disposition: attachment; filename="' . basename($file_name) . '"');
+ header("Content-Disposition: attachment; filename=\"" . basename($filename) . "\"");
 ?>
 
 <html>
