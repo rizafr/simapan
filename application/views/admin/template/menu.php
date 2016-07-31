@@ -25,12 +25,15 @@ $unReportCount = $queryUnReported->num_rows();
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">
 
 								<i class="icon-envelope icon-white"></i>
-								<span class="badge bg-important"><?= $unReportCount; ?></span>
+								<span class="badge bg-important"><?= $countSuratMasukNotReported+$countSuratBelumDisposisi; ?></span>
 							</a>
 							<ul class="dropdown-menu extended notification">
 								<div class="notify-arrow notify-arrow-red"></div>
 								<li>
-									<p class="red">Ada <?= $unReportCount; ?> surat yang belum ditindaklanjuti atau belum ada laporan</p>
+									<p class="red">Ada <?= $countSuratMasukNotReported; ?> surat yang belum ditindaklanjuti atau belum ada laporan</p>
+								</li>
+								<li>
+									<p class="red">Ada <?= $countSuratBelumDisposisi; ?> surat yang belum disposisi</p>
 								</li>
 								<li>
 									<a href="<?php echo base_url(); ?>surat_masuk/masuk">

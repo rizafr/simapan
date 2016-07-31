@@ -35,7 +35,8 @@
                     <th width="11%">Nomor, Tgl. Surat</th>
                     <th width="7.5%">Sifat Surat</th>
                     <th width="5%">Tgl. Penyelesaian</th>
-                    <th width="7.5%">Status Disposisi</th>
+                    <th width="5.5%">Status Disposisi</th>
+                    <th width="7.5%">Disposisi Ke</th>
                     <th width="7.5%">Keterangan</th>
                     <th width="25%">Aksi</th>
                 </tr>
@@ -44,7 +45,6 @@
                 <tbody>
                 <?php
                 $disposisi = array("1" => "Register Aplikasi", "2" => "Belum ada laporan", "3" => "Selesai");
-
 
                 if (empty($data)) {
                     echo "<tr><td colspan='9'  style='text-align: center; font-weight: bold'>--Data tidak ditemukan--</td></tr>";
@@ -110,13 +110,20 @@
                                 <span class="label <?= $btn?>">
                                     <span class="<?= $icon; ?> icon-white"></span> <?php echo  $disposisi[$b->status_disposisi]; ?>
                                 </span>
+
+                            </td>
+                            <td>
+                                <?php if (empty($b->disposi_ke)) : ?>
+                                <?= $b->disposisi_ke?>
+                                <?php else : ?>
+                                <p> Belum ada </p>
+                                <?php endif; ?>
                             </td>
                             <td>
                                 <?= $b->keterangan?>
                             </td>
 
                             <td>
-
                                 <div class="btn-group">
                                     <a href="<?php echo base_URL() ?>index.php/surat_masuk/masuk/edt/<?php echo $b->id_surat_masuk ?>"
                                        class="btn btn-success btn-sm" title="Edit Data"><i

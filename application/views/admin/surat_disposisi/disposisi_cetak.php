@@ -61,13 +61,7 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 <table class="border">
 	<tr><td style="height: 350px" valign="top" colspan="2" align="center"><b>INSTRUKSI /  INFORMASI: </b> <br>
 	<ol align="left">
-	<?php 
-	if (!empty($datpil3)) {
-		foreach ($datpil3 as $d3) {
-			echo "<li><i>".$d3->isi_instruksi."</i></li>";
-		}
-	}
-	?>
+
 	</ol>
 	</b></td>
 	
@@ -75,13 +69,7 @@ $q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 	<b>DITERUSKAN KEPADA :</b> 
 	<br />
 	<p align="left">
-	<?php 
-	if (!empty($datpil2)) {
-		foreach ($datpil2 as $dp) {
-			echo "<input type='checkbox'  value='' checked> ".$dp->tujuan_disposisi."<br />";
-		}
-	}
-	?>
+	
 	</p>
 	</td></tr>
 </table>

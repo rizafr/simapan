@@ -22,7 +22,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 header("Cache-control: private");
 header("Content-Type: application/vnd.ms-word; name='word'");
- header("Content-Disposition: attachment; filename=\"" . basename($filename) . "\"");
+header('Content-Disposition: attachment; filename="' . basename($filename) . '"');
 ?>
 
 <html>
@@ -44,9 +44,9 @@ header("Content-Type: application/vnd.ms-word; name='word'");
 				<th width="7%">Sifat</th>
 				<th width="28%">Perihal</th>
 				<th width="18%">Pengirim</th>
-				<th width="10%">Pengolah</th>
-				<th width="7%">Tgl, Paraf</th>
+				<th width="7%">Tgl Disposisi</th>
 				<th width="5%">Status Disposi</th>
+				<th width="10%">Pembuat Surat</th>
 			</tr>
 				
 			<?php
@@ -54,7 +54,7 @@ header("Content-Type: application/vnd.ms-word; name='word'");
 
 			if (!empty($data)) {
 				$no = 0;
-			foreach ($data as $d) {
+				foreach ($data as $d) {
 				$no++;
 			?>
 			<tr>
@@ -65,9 +65,9 @@ header("Content-Type: application/vnd.ms-word; name='word'");
 				<td><?php echo $d->status_surat_masuk; ?></td>
 				<td><?php echo $d->perihal_surat_masuk; ?></td>
 				<td><?php echo $d->asal_surat_masuk; ?></td>
-				<td><?php echo gval("t_admin", "id", "nama", $d->pengolah); ?></td>
 				<td><?php echo tgl_jam_sql($d->tgl_diterima); ?></td>
 				<td><?php echo $disposisi[$d->status_disposisi] ; ?></td>
+				<td><?php echo 'admin' ?></td>
 			</tr>
 			<?php 
 				}
@@ -78,6 +78,3 @@ header("Content-Type: application/vnd.ms-word; name='word'");
 			</table>
     </body>
 </html>
-
-
-<?php echo $map['js']; ?>

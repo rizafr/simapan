@@ -15,6 +15,7 @@ class Admin extends CI_Controller {
 		$a['page']	= "beranda";
 		$a['countSuratMasuk']	= $this->web_model->getCountSuratMasuk();
 		$a['countSuratMasukSelesai']	= $this->web_model->getCountSuratMasukSelesai();
+		$a['countSuratBelumDisposisi']	= $this->web_model->getCountSuratBelumDisposisi();
 		$a['countSuratMasukNotReported']	= $this->web_model->getCountSuratMasukNotReported();
 		$this->load->view('admin/index', $a);
 	}

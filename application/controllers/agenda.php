@@ -26,7 +26,7 @@ class Agenda extends CI_Controller {
 		$a['tgl_end']	= $tgl_end;
 
 		$a['data']	= $this->db->query("SELECT * FROM surat_masuk WHERE tgl_diterima >= '$tgl_start' AND tgl_diterima <= '$tgl_end' ORDER BY id_surat_masuk")->result();
-		$a['page']	= "agenda/surat_masuk_cetak";
-		$this->load->view('admin/index', $a);
+//		$a['page']	= "agenda/surat_masuk_cetak";
+		$this->load->view('admin/agenda/surat_masuk_cetak', $a);
 	}
 }

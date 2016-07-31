@@ -49,6 +49,7 @@ if ($mode == "edt" || $mode == "act_edt") {
       accept-charset="utf-8" enctype="multipart/form-data">
 
     <input type="hidden" name="id_surat_masuk" value="<?php echo $id_surat_masuk; ?>">
+    <input type="hidden" name="tgl_penyelesaian" class="tgl" tabindex="9" value="<?php echo $tgl_penyelesaian; ?>" style="width: 100px" class="form-control" required></b>
 
     <div class="row-fluid well" style="overflow: hidden">
 
@@ -115,12 +116,7 @@ if ($mode == "edt" || $mode == "act_edt") {
                     </td>
                 </tr>
 
-                <tr>
-                    <td width="20%">Tanggal Penyelesaian</td>
-                    <td>
-                        <b><input type="text" name="tgl_penyelesaian" class="tgl" tabindex="9" value="<?php echo $tgl_penyelesaian; ?>" style="width: 100px" class="form-control" required></b>
-                    </td>
-                </tr>
+
                 <tr>
                     <td width="20%">File Surat (Scan)</td>
                     <td>
@@ -137,7 +133,7 @@ if ($mode == "edt" || $mode == "act_edt") {
                 <tr>
                     <td width="20%">Keterangan</td>
                     <td>
-                        <b><input type="text" name="keterangan" value="<?php echo $keterangan; ?>" style="width: 400px" class="form-control" tabindex="11"></b>
+                        <textarea name="keterangan" tabindex="11" style="width: 400px; height: 90px" class="form-control"><?php echo $keterangan; ?></textarea>
                     </td>
                 </tr>
             </table>

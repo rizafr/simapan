@@ -28,6 +28,7 @@ class Disposisi extends CI_Controller
         $id_disposisi = addslashes($this->input->post('id_disposisi'));
         $id_surat_masuk = addslashes($this->input->post('id_surat_masuk'));
         $tujuan_disposisi = addslashes($this->input->post('tujuan_disposisi'));
+        $kode_intruksi = addslashes($this->input->post('kode_intruksi'));
         $isi_instruksi = addslashes($this->input->post('isi_instruksi'));
         $tgl_instruksi = addslashes($this->input->post('tgl_instruksi'));
         $batas_waktu = addslashes($this->input->post('batas_waktu'));
@@ -92,7 +93,7 @@ class Disposisi extends CI_Controller
             $this->breadcrumbs->push('Surat Masuk', '/surat_masuk/masuk');
             $this->breadcrumbs->push('Surat Disposisi', 'disposisi/surat_disposisi/' . $id_suratu);
             $this->breadcrumbs->push('Ubah Surat Disposisi', 'disposisi/surat_disposisi/');
-            $a['datpil'] = $this->db->query("SELECT d.*, s.status_disposisi, i.kode_intruksi FROM disposisi d, surat_masuk s, pelaksanaan_intruksi i WHERE i.id = d.isi_instruksi and d.id_disposisi = '$id_dispu' and d.id_surat_masuk = s.id_surat_masuk")->row();
+            $a['datpil'] = $this->db->query("SELECT d.*, s.status_disposisi  FROM disposisi d, surat_masuk s  WHERE  d.id_disposisi = '$id_dispu' and d.id_surat_masuk = s.id_surat_masuk")->row();
             $a['page'] = "surat_disposisi/f_surat_disposisi";
         } else if ($act == "act_add") {
             if ($this->upload->do_upload('lampiran_dokumen')) {
@@ -104,6 +105,7 @@ class Disposisi extends CI_Controller
             $queryDisposi = $this->db->query("INSERT INTO disposisi(
                 `id_disposisi` ,
                 `id_surat_masuk` ,
+                `kode_intruksi` ,
                 `isi_instruksi` ,
                 `tgl_instruksi` ,
                 `batas_waktu` ,
@@ -116,10 +118,9 @@ class Disposisi extends CI_Controller
                 `lampiran_foto`,
                 `lampiran_dokumen`
             ) 
-            VALUES (NULL, '$id_surat_masuk', '$isi_instruksi', NOW(),'$batas_waktu', '$waktu_lama_instruksi', '$paraf_kasi', '$paraf_kajari', '$tujuan_disposisi', NOW() , '$catatan', '".$lampiran_foto['file_name']."' ,'".$lampiran_dokumen['file_name']."')");
+            VALUES (NULL, '$id_surat_masuk', '$kode_intruksi', '$isi_instruksi', NOW(),'$batas_waktu', '$waktu_lama_instruksi', '$paraf_kasi', '$paraf_kajari', '$tujuan_disposisi', NOW() , '$catatan', '".$lampiran_foto['file_name']."' ,'".$lampiran_dokumen['file_name']."')");
             if ($queryDisposi) {
-                $kode_intruksi = $this->db->query("SELECT kode_intruksi FROM pelaksanaan_intruksi WHERE id = '$isi_instruksi'")->row();
-                if ($kode_intruksi->kode_intruksi == 1) {
+                if ($kode_intruksi == 1) {
                     $status = 3;
                 } else {
                     $status = 2;
@@ -142,20 +143,26 @@ class Disposisi extends CI_Controller
             }else {
                 $lampiran_foto = $lampiran->lampiran_foto;
             }
-            $this->db->query("UPDATE disposisi SET tujuan_disposisi = '$tujuan_disposisi', isi_instruksi = '$isi_instruksi', batas_waktu = '$batas_waktu', waktu_lama_instruksi = '$waktu_lama_instruksi',  paraf_kajari = '$paraf_kajari', paraf_kasi = '$paraf_kasi', catatan = '$catatan', lampiran_foto = '".$lampiran_foto."', lampiran_dokumen = '".$lampiran_dokumen."' WHERE id_disposisi = '$id_disposisi'");
+            $this->db->query("UPDATE disposisi SET tujuan_disposisi = '$tujuan_disposisi', kode_intruksi = '$kode_intruksi', isi_instruksi = '$isi_instruksi', batas_waktu = '$batas_waktu', waktu_lama_instruksi = '$waktu_lama_instruksi',  paraf_kajari = '$paraf_kajari', paraf_kasi = '$paraf_kasi', catatan = '$catatan', lampiran_foto = '".$lampiran_foto."', lampiran_dokumen = '".$lampiran_dokumen."' WHERE id_disposisi = '$id_disposisi'");
             if ($lampiran_dokumen) {
                 $this->db->query("UPDATE surat_masuk SET status_disposisi = '3' where id_surat_masuk ='$id_surat_masuk'");
             }
+            if ($kode_intruksi == 1) {
+                $status = 3;
+            } else if ($kode_intruksi == 2) {
+                $status = 2;
+            }
+            $this->db->query("UPDATE surat_masuk SET status_disposisi = '$status' where id_surat_masuk ='$id_surat_masuk'");
+
             $this->session->set_flashdata("k", "<div class=\"alert alert-success\" id=\"alert\">Disposisi berhasil diubah. </div>");
             redirect('surat_masuk/masuk');
         } else {
             $this->breadcrumbs->push('Beranda', '/admin');
             $this->breadcrumbs->push('Surat Masuk', '/surat_masuk/masuk');
             $this->breadcrumbs->push('Surat Disposisi', 'disposisi/surat_disposisi/');
-            $a['data'] = $this->db->query("SELECT d.*, i.*, rd.tujuan_disposisi as disposisi FROM disposisi d, pelaksanaan_intruksi i, ref_disposisi rd WHERE d.id_surat_masuk = '$id_suratu' and i.id = d.isi_instruksi and rd.id = d.tujuan_disposisi  LIMIT $awal, $akhir ")->result();
+            $a['data'] = $this->db->query("SELECT d.*, rd.tujuan_disposisi as disposisi FROM disposisi d, ref_disposisi rd WHERE d.id_surat_masuk = '$id_suratu' and rd.id = d.tujuan_disposisi  LIMIT $awal, $akhir ")->result();
             $a['page'] = "surat_disposisi/l_surat_disposisi";
         }
-        $a['intruksi'] = $this->crud_intruksi->get_all_instruksi();
         $a['ref_disposisi'] = $this->crud_ref_disposisi->get_all_ref_disposisi();
         $this->load->view('admin/index', $a);
     }

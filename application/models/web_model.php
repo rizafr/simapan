@@ -182,5 +182,13 @@ class Web_model extends CI_Model {
 		return $query->num_rows();
 	}
 
+	public function getCountSuratBelumDisposisi() {
+		$this->db->get('surat_masuk');
+		$this->db->where('status_disposisi', '1');
+		$query = $this->db->get('surat_masuk');
+
+		return $query->num_rows();
+	}
+
 	
 }

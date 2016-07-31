@@ -18,7 +18,9 @@ class Surat_masuk extends CI_Controller {
 		$this->load->view('admin/index', $a);
 	}
 
-	
+	/*
+	 * 
+	 */
 	public function masuk() {
 		if ($this->session->userdata('admin_valid') == FALSE && $this->session->userdata('admin_id') == "") {
 			$this->session->set_flashdata("k", "<div id=\"alert\" class=\"alert alert-error\">Maaf Anda belum login. Silakan login terlebih dahulu</div>");
@@ -103,7 +105,6 @@ class Surat_masuk extends CI_Controller {
 		} else if ($act == "act_edt") {
 			if ($this->upload->do_upload('lampiran')) {
 				$up_data	 	= $this->upload->data();
-							
 				$this->db->query("UPDATE surat_masuk SET kode_surat_masuk = '$kode_surat_masuk', no_surat_masuk = '$no_surat_masuk', asal_surat_masuk = '$asal_surat_masuk', tgl_diterima = '$tgl_diterima', tgl_surat_masuk = '$tgl_surat_masuk', tgl_penyelesaian = '$tgl_penyelesaian', status_surat_masuk = '$status_surat_masuk', perihal_surat_masuk = '$perihal_surat_masuk', no_agenda = '$no_agenda', keterangan = '$keterangan', lampiran = '".$up_data['file_name']."' WHERE id_surat_masuk = '$id_surat_masuk'");
 			} else {
 				$this->db->query("UPDATE surat_masuk SET kode_surat_masuk = '$kode_surat_masuk', no_surat_masuk = '$no_surat_masuk', asal_surat_masuk = '$asal_surat_masuk',tgl_diterima = '$tgl_diterima', tgl_surat_masuk = '$tgl_surat_masuk', tgl_penyelesaian = '$tgl_penyelesaian' , status_surat_masuk = '$status_surat_masuk', perihal_surat_masuk = '$perihal_surat_masuk', no_agenda = '$no_agenda', keterangan = '$keterangan' WHERE id_surat_masuk = '$id_surat_masuk'");
@@ -114,7 +115,10 @@ class Surat_masuk extends CI_Controller {
 		} else {
 			$this->breadcrumbs->push('Beranda', '/admin');
 			$this->breadcrumbs->push('Surat Masuk', '/surat_masuk/masuk');
-			$a['data']		= $this->db->query("SELECT sm.*, d.id_disposisi FROM surat_masuk sm LEFT JOIN disposisi d ON sm.id_surat_masuk = d.id_surat_masuk order by sm.tgl_diterima ASC  LIMIT $awal, $akhir ")->result();
+			$a['data']		= $this->db->query("SELECT sm.*, d.id_disposisi, rd.tujuan_disposisi as disposisi_ke FROM surat_masuk sm 
+													LEFT JOIN disposisi d ON sm.id_surat_masuk = d.id_surat_masuk 
+													LEFT JOIN ref_disposisi rd ON rd.id = d.tujuan_disposisi 
+													order by sm.tgl_diterima ASC  LIMIT $awal, $akhir ")->result();
 			$a['page']		= "surat_masuk/l_surat_masuk";
 		}
 		

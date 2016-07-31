@@ -27,7 +27,7 @@ header('Content-Disposition: attachment; filename="' . basename($file_name) . '"
 
 <html>
     <title><b> DATA JAKSA <?php echo $nama['nama_jaksa']." NIP. ".$nama['nip']; ?><br/> <?php echo tgl_jam_sql($tgl_start)."</b> sampai dengan tanggal <b>".tgl_jam_sql($tgl_end)."</b>";?></title>
-    <head> 
+    <head>
         <meta charset="utf-8">
         <link href="<?php echo base_url(); ?>assets/admin/css/print.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>assets/admin/css/bootstrap.css" rel="stylesheet" />
@@ -42,8 +42,8 @@ header('Content-Disposition: attachment; filename="' . basename($file_name) . '"
 				<th>Nama Tersangka</th>
 				<th>Perkara</th>
 			</tr>
-				
-			<?php 
+
+			<?php
 			if (!empty($data)) {
 				$no = 0;
 				foreach ($data as $d) {
@@ -56,7 +56,7 @@ header('Content-Disposition: attachment; filename="' . basename($file_name) . '"
 					<td><?php echo $d->nama_tersangka; ?></td>
 					<td><?php echo $d->perkara; ?></td>
 				</tr>
-			<?php 
+			<?php
 				}
 			} else {
 				echo "<tr><td colspan='5' style='text-align: center'>Tidak ada data</td></tr>";

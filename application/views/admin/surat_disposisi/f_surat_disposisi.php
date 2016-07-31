@@ -6,6 +6,7 @@ if ($mode == "edt" || $mode == "act_edt") {
     $id_disposisi = $datpil->id_disposisi;
     $id_surat_masuk = $datpil->id_surat_masuk;
     $tujuan_disposisi = $datpil->tujuan_disposisi;
+    $kode_intruksi = $datpil->kode_intruksi;
     $isi_instruksi = $datpil->isi_instruksi;
     $tgl_instruksi = $datpil->tgl_instruksi;
     $waktu_lama_instruksi = $datpil->waktu_lama_instruksi;
@@ -23,6 +24,7 @@ if ($mode == "edt" || $mode == "act_edt") {
     $id_disposisi = "";
     $id_surat_masuk = $this->uri->segment(3);
     $tujuan_disposisi = "";
+    $kode_intruksi = "";
     $isi_instruksi = "";
     $tgl_instruksi = "";
     $waktu_lama_instruksi = "";
@@ -76,17 +78,24 @@ if ($mode == "edt" || $mode == "act_edt") {
                     </td>
                 </tr>
                 <tr>
-                    <td width="20%">Isi Intruksi</td>
+                    <td width="20%">Jenis Intruksi</td>
                     <td>
-                        <select name="isi_instruksi" class="col-xs-8" required>
+                        <select name="kode_intruksi" class="col-md-12" required>
                             <option value="">--Pilih--</option>
-                            <?php foreach ($intruksi as $intruksi) { ?>
-                                <option
-                                    value="<?php echo $intruksi->id ?>" <?php echo $intruksi->id == $isi_instruksi ? 'selected' : ''; ?>>
-                                    <?php echo $intruksi->intruksi ?>
+                            <?php
+                            $kode_intruksi_all = array('1' => 'Tidak Ada Laporan', '2' => 'Ada Laporan');
+                            foreach ($kode_intruksi_all as $key => $value ) { ?>
+                                <option value="<?php echo $key ?>" <?php echo $key == $kode_intruksi ? 'selected' : ''; ?>>
+                                    <?php echo $value ?>
                                 </option>
                             <?php } ?>
                         </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="20%">Isi Intruksi</td>
+                    <td>
+                        <textarea name="isi_instruksi" tabindex="11" style="width: 400px; height: 90px" class="form-control" required><?php echo $isi_instruksi; ?></textarea>
                     </td>
                 </tr>
             </table>
@@ -96,14 +105,17 @@ if ($mode == "edt" || $mode == "act_edt") {
             <table width="100%" class="table-form">
                 <tr>
                     <td width="20%">Batas Waktu</td>
-                    <td><b><input type="text" tabindex="4" name="batas_waktu" required
+                    <td>
+                            <input type="text" tabindex="4" name="batas_waktu" required
                                   value="<?php echo $batas_waktu; ?>" id="tgl_surat" style="width: 100px"
-                                  class="form-control"></b></td>
+                                  class="form-control">
+                    </td>
                 </tr>
                 <tr>
                     <td width="20%">Catatan</td>
-                    <td><b><input type="text" tabindex="5" name="catatan" value="<?php echo $catatan; ?>"
-                                  style="width: 400px" class="form-control"></b></td>
+                    <td>
+                        <textarea name="catatan" tabindex="11" style="width: 400px; height: 90px" class="form-control"><?php echo $catatan; ?></textarea>
+                    </td>
                 </tr>
                 <?php  if($kode_intruksi == 2):?>
                 <tr>
@@ -162,11 +174,9 @@ if ($mode == "edt" || $mode == "act_edt") {
                 <div class="right mt25">
                     <a href="<?php echo base_URL(); ?>surat_masuk/masuk" class="btn btn-success"
                        tabindex="11"><i class="icon icon-arrow-left icon-white"></i> Kembali</a>
-                    <?php if($status_disposisi != 3):?>
-                    <button type="submit" class="btn btn-primary">
+                   <button type="submit" class="btn btn-primary">
                         <i class="icon icon-ok icon-white"></i> Simpan
                     </button>
-                    <?php endif;?>
                 </div>
             </div>
         </div>

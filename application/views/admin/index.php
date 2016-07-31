@@ -1,6 +1,10 @@
 <?php
 	$q_instansi	= $this->db->query("SELECT * FROM tr_instansi LIMIT 1")->row();
 	$q_aplikasi	= $this->db->query("SELECT * FROM t_aplikasi LIMIT 1")->row();
+	$notif = array(
+		'countSuratMasukNotReported' => $countSuratMasukNotReported,
+		'countSuratBelumDisposisi' => $countSuratBelumDisposisi,
+	);
 ?>
 <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -152,7 +156,7 @@
 	</head>
 	
 	<body>
-		<?php $this->load->view('admin/template/menu'); ?>
+		<?php $this->load->view('admin/template/menu', $notif); ?>
 		<?php $this->load->view('admin/help/help'); ?>
 		<div class="container">
 			<div class="wrap">

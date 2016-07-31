@@ -55,10 +55,10 @@
 							<i class=" icon-envelope"></i>
 						</div>
 						<div class="value">
-							<h1 class="countSuratKeluar">
+							<h1 class="countUpSuratBelumDisposisi">
 								0
 							</h1>
-							<p>Surat Keluar</p>
+							<p>Surat Belum Disposisi</p>
 						</div>
 					</section>
 				</div>
@@ -94,353 +94,6 @@
 			<!--state overview end-->	
 			
 			<div class="row">				
-				<div class="col-lg-6">
-					<!--tab nav start-->
-					<section class="panel wow slideInLeft" data-wow-duration="2s">
-						<header class="panel-heading tab-bg-dark-navy-blue ">
-							<ul class="nav nav-tabs">
-								<li class="active">
-									<a data-toggle="tab" href="#disposi">Disposisi</a>
-								</li> 
-								<li class="">
-									<a data-toggle="tab" href="#home">Surat Masuk</a>
-								</li>
-								<li class="">
-									<a data-toggle="tab" href="#about">Surat Keluar</a>
-								</li>
-							</ul>
-						</header>
-						<div class="panel-body">
-							<div class="tab-content">
-								<div id="disposisi" class="tab-pane active">
-									<table class="table table-hover personal-task">
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>
-													Disposisi
-												</td>
-												<td>
-													<span class="badge bg-important">75%</span>
-												</td>
-												<td>
-													<div id="work-progress1"></div>
-												</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>
-													Product Delivery
-												</td>
-												<td>
-													<span class="badge bg-success">43%</span>
-												</td>
-												<td>
-													<div id="work-progress2"></div>
-												</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>
-													Payment Collection
-												</td>
-												<td>
-													<span class="badge bg-info">67%</span>
-												</td>
-												<td>
-													<div id="work-progress3"></div>
-												</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>
-													Work Progress
-												</td>
-												<td>
-													<span class="badge bg-warning">30%</span>
-												</td>
-												<td>
-													<div id="work-progress4"></div>
-												</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>
-													Delivery Pending
-												</td>
-												<td>
-													<span class="badge bg-primary">15%</span>
-												</td>
-												<td>
-													<div id="work-progress5"></div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<div id="home" class="tab-pane">
-									<table class="table table-hover personal-task">
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>
-													Surat Masuk
-												</td>
-												<td>
-													<span class="badge bg-important">75%</span>
-												</td>
-												<td>
-													<div id="work-progress1"></div>
-												</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>
-													Product Delivery
-												</td>
-												<td>
-													<span class="badge bg-success">43%</span>
-												</td>
-												<td>
-													<div id="work-progress2"></div>
-												</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>
-													Payment Collection
-												</td>
-												<td>
-													<span class="badge bg-info">67%</span>
-												</td>
-												<td>
-													<div id="work-progress3"></div>
-												</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>
-													Work Progress
-												</td>
-												<td>
-													<span class="badge bg-warning">30%</span>
-												</td>
-												<td>
-													<div id="work-progress4"></div>
-												</td>
-											</tr>
-											<tr>
-												<td>5</td>
-												<td>
-													Delivery Pending
-												</td>
-												<td>
-													<span class="badge bg-primary">15%</span>
-												</td>
-												<td>
-													<div id="work-progress5"></div>
-												</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
-								<div id="about" class="tab-pane"><table class="table table-hover personal-task">
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>
-												Surat Keluar
-											</td>
-											<td>
-												<span class="badge bg-important">75%</span>
-											</td>
-											<td>
-												<div id="work-progress1"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>
-												Product Delivery
-											</td>
-											<td>
-												<span class="badge bg-success">43%</span>
-											</td>
-											<td>
-												<div id="work-progress2"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>
-												Payment Collection
-											</td>
-											<td>
-												<span class="badge bg-info">67%</span>
-											</td>
-											<td>
-												<div id="work-progress3"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>
-												Work Progress
-											</td>
-											<td>
-												<span class="badge bg-warning">30%</span>
-											</td>
-											<td>
-												<div id="work-progress4"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>
-												Delivery Pending
-											</td>
-											<td>
-												<span class="badge bg-primary">15%</span>
-											</td>
-											<td>
-												<div id="work-progress5"></div>
-											</td>
-										</tr>
-									</tbody>
-								</table></div>
-								<div id="profile" class="tab-pane"><table class="table table-hover personal-task">
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>
-												Posisi Penahanan
-											</td>
-											<td>
-												<span class="badge bg-important">75%</span>
-											</td>
-											<td>
-												<div id="work-progress1"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>
-												Product Delivery
-											</td>
-											<td>
-												<span class="badge bg-success">43%</span>
-											</td>
-											<td>
-												<div id="work-progress2"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>
-												Payment Collection
-											</td>
-											<td>
-												<span class="badge bg-info">67%</span>
-											</td>
-											<td>
-												<div id="work-progress3"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>
-												Work Progress
-											</td>
-											<td>
-												<span class="badge bg-warning">30%</span>
-											</td>
-											<td>
-												<div id="work-progress4"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>
-												Delivery Pending
-											</td>
-											<td>
-												<span class="badge bg-primary">15%</span>
-											</td>
-											<td>
-												<div id="work-progress5"></div>
-											</td>
-										</tr>
-									</tbody>
-								</table></div>
-								<div id="contact" class="tab-pane"><table class="table table-hover personal-task">
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>
-												Posisi Perkara
-											</td>
-											<td>
-												<span class="badge bg-important">75%</span>
-											</td>
-											<td>
-												<div id="work-progress1"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>
-												Product Delivery
-											</td>
-											<td>
-												<span class="badge bg-success">43%</span>
-											</td>
-											<td>
-												<div id="work-progress2"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>
-												Payment Collection
-											</td>
-											<td>
-												<span class="badge bg-info">67%</span>
-											</td>
-											<td>
-												<div id="work-progress3"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>4</td>
-											<td>
-												Work Progress
-											</td>
-											<td>
-												<span class="badge bg-warning">30%</span>
-											</td>
-											<td>
-												<div id="work-progress4"></div>
-											</td>
-										</tr>
-										<tr>
-											<td>5</td>
-											<td>
-												Delivery Pending
-											</td>
-											<td>
-												<span class="badge bg-primary">15%</span>
-											</td>
-											<td>
-												<div id="work-progress5"></div>
-											</td>
-										</tr>
-									</tbody>
-								</table></div>
-							</div>
-						</div>
-					</section>
-					<!--tab nav start-->
-				</div>
 				
 				<div class="col-lg-6">
 					<!--Grafik Rekapitulasi-->
@@ -458,43 +111,65 @@
 		
 		$(function () {
 			$('#grafik').highcharts({
-				title: {
-					text: 'Grafik Rekapitulasi',
-					x: -20 //center
+				chart: {
+					type: 'column'
 				},
-				subtitle: {
-					text: 'Tahun 2015',
-					x: -20
+				title: {
+					text: 'Grafik Surat Masuk'
 				},
 				xAxis: {
-					categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-						'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+					categories: [
+						'Jan',
+						'Feb',
+						'Mar',
+						'Apr',
+						'May',
+						'Jun',
+						'Jul',
+						'Aug',
+						'Sep',
+						'Oct',
+						'Nov',
+						'Dec'
+					],
+					crosshair: true
 				},
 				yAxis: {
+					min: 0,
 					title: {
-						text: 'Jumlah'
-					},
-					plotLines: [{
-						value: 0,
-						width: 1,
-						color: '#808080'
-					}]
+						text: 'jumlah'
+					}
 				},
 				tooltip: {
-					valueSuffix: ' data'
+					headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+					pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+					'<td style="padding:0"><b>{point.y:.f} surat</b></td></tr>',
+					footerFormat: '</table>',
+					shared: true,
+					useHTML: true
 				},
-				legend: {
-					layout: 'vertical',
-					align: 'right',
-					verticalAlign: 'middle',
-					borderWidth: 0
+				plotOptions: {
+					column: {
+						pointPadding: 0.2,
+						borderWidth: 0
+					}
 				},
 				series: [{
-					name: 'Surat Masuk',
-					data: [<?= $countSuratMasuk?>]
+					name: 'Total Surat Masuk',
+					data: [<?= $countSuratMasuk; ?>]
+
 				}, {
-					name: 'Surat Keluar',
-					data: [0]
+					name: 'Surat Belum Ada Laporan',
+					data: [<?= $countSuratMasukNotReported?>]
+
+				}, {
+					name: 'Surat Belum Disposisi',
+					data: [<?= $countSuratBelumDisposisi?>]
+
+				}, {
+					name: 'Surat Selesai',
+					data: [<?= $countSuratMasukSelesai?>]
+
 				}]
 			});
 		});
@@ -568,11 +243,11 @@
 
 		countUpSuratMasukNotReported(<?= $countSuratMasukNotReported; ?>);
 
-		function countUp4(count)
+		function countUpSuratBelumDisposisi(count)
 		{
 			var div_by = 100,
 				speed = Math.round(count / div_by),
-				$display = $('.count4'),
+				$display = $('.countUpSuratBelumDisposisi'),
 				run_count = 1,
 				int_speed = 24;
 
@@ -589,7 +264,7 @@
 			}, int_speed);
 		}
 
-		countUp4(5328);
+		countUpSuratBelumDisposisi(<?= $countSuratBelumDisposisi?>);
 
 
 //SCROLL TO TOP----------------------------------------------------
@@ -622,6 +297,11 @@
 
 	});
 	</script>
-<?php if($countSuratMasukNotReported > 0) {
-	$this->load->view('admin/notifikasi/notifikasi', $countSuratMasukNotReported);
+
+<?php if(($countSuratMasukNotReported > 0) || ($countSuratBelumDisposisi > 0)) {
+	$data = array(
+		'countSuratMasukNotReported' => $countSuratMasukNotReported,
+		'countSuratBelumDisposisi' => $countSuratBelumDisposisi
+		);
+	$this->load->view('admin/notifikasi/notifikasi', $data);
  } ?>
