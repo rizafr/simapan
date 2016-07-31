@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e57f5aeb-fc1b-4974-b162-f42f296c37f1" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/Aplikasi_SI_MAPAN.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/CONTOH_NOTA_DINAS.doc" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/Gambar-bergerak-naruto-09.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/PENGUMUMAN_KE_KPDE.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/PENGUMUMAN_KE_KPDE_(1).docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/laptop.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/no-photo-333.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/pin2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/upload/surat_masuk/siapra_disposisi_disposisi_cetak_1.pdf" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin.php" afterPath="$PROJECT_DIR$/application/controllers/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/agenda.php" afterPath="$PROJECT_DIR$/application/controllers/agenda.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/disposisi.php" afterPath="$PROJECT_DIR$/application/controllers/disposisi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/surat_masuk.php" afterPath="$PROJECT_DIR$/application/controllers/surat_masuk.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/web_model.php" afterPath="$PROJECT_DIR$/application/models/web_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/agenda/jaksa_cetak.php" afterPath="$PROJECT_DIR$/application/views/admin/agenda/jaksa_cetak.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/agenda/surat_masuk_cetak.php" afterPath="$PROJECT_DIR$/application/views/admin/agenda/surat_masuk_cetak.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/beranda.php" afterPath="$PROJECT_DIR$/application/views/admin/beranda.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/index.php" afterPath="$PROJECT_DIR$/application/views/admin/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/notifikasi/notifikasi.php" afterPath="$PROJECT_DIR$/application/views/admin/notifikasi/notifikasi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/surat_disposisi/disposisi_cetak.php" afterPath="$PROJECT_DIR$/application/views/admin/surat_disposisi/disposisi_cetak.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/surat_disposisi/f_surat_disposisi.php" afterPath="$PROJECT_DIR$/application/views/admin/surat_disposisi/f_surat_disposisi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/surat_masuk/f_surat_masuk.php" afterPath="$PROJECT_DIR$/application/views/admin/surat_masuk/f_surat_masuk.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/surat_masuk/l_surat_masuk.php" afterPath="$PROJECT_DIR$/application/views/admin/surat_masuk/l_surat_masuk.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/template/menu.php" afterPath="$PROJECT_DIR$/application/views/admin/template/menu.php" />
-    </list>
+    <list default="true" id="e57f5aeb-fc1b-4974-b162-f42f296c37f1" name="Default" comment="" />
     <ignored path="simapan.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -85,16 +58,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="header-info.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/template/header-info.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -124,13 +87,26 @@
       <file leaf-file-name="beranda.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/admin/beranda.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="2784">
               <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
               <folding>
                 <element signature="e#4669#5141#0#HTML" expanded="false" />
                 <marker date="1469948757949" expanded="true" signature="3349:3363" ph="..." />
                 <marker date="1469948757949" expanded="true" signature="3427:3457" ph="..." />
                 <marker date="1469948757949" expanded="true" signature="3500:3509" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/admin/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="5" column="63" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="63" />
+              <folding>
+                <marker date="1469947445177" expanded="true" signature="39:72" ph="SELECT * FRO... tr_instansi" />
+                <marker date="1469947445177" expanded="true" signature="116:148" ph="SELECT * FRO... t_aplikasi" />
               </folding>
             </state>
           </provider>
@@ -158,10 +134,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="504">
+            <state relative-caret-position="388">
               <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
               <folding />
             </state>
@@ -486,18 +462,18 @@
       <workItem from="1468722737377" duration="14185000" />
       <workItem from="1468803573095" duration="544000" />
       <workItem from="1469941296417" duration="13000" />
-      <workItem from="1469941324538" duration="7873000" />
+      <workItem from="1469941324538" duration="8191000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59801000" />
+    <option name="totallyTimeSpent" value="60119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="742" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27559662" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27559662" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -903,17 +879,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="5" column="63" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="63" />
-          <folding>
-            <marker date="1469947445177" expanded="true" signature="39:72" ph="SELECT * FRO... tr_instansi" />
-            <marker date="1469947445177" expanded="true" signature="116:148" ph="SELECT * FRO... t_aplikasi" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/template/menu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1392">
@@ -933,19 +898,6 @@
           <folding>
             <marker date="1465701520874" expanded="true" signature="39:72" ph="SELECT * FRO... tr_instansi" />
             <marker date="1465701520874" expanded="true" signature="116:148" ph="SELECT * FRO... t_aplikasi" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/beranda.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
-          <folding>
-            <element signature="e#4669#5141#0#HTML" expanded="false" />
-            <marker date="1469948757949" expanded="true" signature="3349:3363" ph="..." />
-            <marker date="1469948757949" expanded="true" signature="3427:3457" ph="..." />
-            <marker date="1469948757949" expanded="true" signature="3500:3509" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1000,9 +952,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
+        <state relative-caret-position="388">
           <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/beranda.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2784">
+          <caret line="96" column="12" selection-start-line="96" selection-start-column="12" selection-end-line="96" selection-end-column="12" />
+          <folding>
+            <element signature="e#4669#5141#0#HTML" expanded="false" />
+            <marker date="1469948757949" expanded="true" signature="3349:3363" ph="..." />
+            <marker date="1469948757949" expanded="true" signature="3427:3457" ph="..." />
+            <marker date="1469948757949" expanded="true" signature="3500:3509" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="5" column="63" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="63" />
+          <folding>
+            <marker date="1469947445177" expanded="true" signature="39:72" ph="SELECT * FRO... tr_instansi" />
+            <marker date="1469947445177" expanded="true" signature="116:148" ph="SELECT * FRO... t_aplikasi" />
+          </folding>
         </state>
       </provider>
     </entry>
