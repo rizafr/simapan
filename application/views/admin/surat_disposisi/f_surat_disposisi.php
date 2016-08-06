@@ -56,7 +56,6 @@ if ($mode == "edt" || $mode == "act_edt") {
         <p> Perihal Surat</b> :<?php echo $judul_surat; ?> </p>
         <p> Pengirim</b> : <?php echo $pengirim; ?> </p>
         <p> Sifat </b> : <?php echo $sifat; ?> </p>
-        <p> Tanggal Penyelesaian </b> : <?php echo tgl_jam_sql($tgl_penyelesaian); ?> </p>
     </div>
 
     <div class="row-fluid well" style="overflow: hidden">
