@@ -34,7 +34,6 @@
                     <th width="15%">Pengirim</th>
                     <th width="11%">Nomor, Tgl. Surat</th>
                     <th width="7.5%">Sifat Surat</th>
-                    <th width="5%">Tgl. Penyelesaian</th>
                     <th width="5.5%">Status Disposisi</th>
                     <th width="7.5%">Disposisi Ke</th>
                     <th width="7.5%">Keterangan</th>
@@ -84,9 +83,6 @@
                                 }
                                 ?>><?php echo $b->status_surat_masuk; ?>
                                 </span>
-                            </td>
-                            <td>
-                                <?= tgl_jam_sql($b->tgl_penyelesaian) ?>
                             </td>
                             <td>
                                 <?php
