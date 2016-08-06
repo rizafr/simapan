@@ -51,7 +51,7 @@ $unReportCount = $queryUnReported->num_rows();
 					<ul class="dropdown-menu" aria-labelledby="themes">
 						<li>
 							<a tabindex="-1" href="<?php echo base_url(); ?>klasifikasi_surat/klas_surat">Klasifikasi Surat</a>
-						</li>					
+						</li>
 						<li>
 							<a tabindex="-2" href="<?php echo base_url(); ?>referensi/sifat_surat">Sifat Surat</a>
 						</li>
@@ -66,9 +66,6 @@ $unReportCount = $queryUnReported->num_rows();
 						</li>
 					</ul>
 				</li>
-
-
-
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="icon-random icon-white"> </i> Manajemen Surat <span class="caret"></span></a>
 					<ul class="dropdown-menu" aria-labelledby="themes">
@@ -79,26 +76,26 @@ $unReportCount = $queryUnReported->num_rows();
 					</ul>
 				</li>
 				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="icon-file icon-white"> </i> Laporan Surat Masuk<span class="caret"></span>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"><i class="icon-file icon-white"> </i> Laporan <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu" aria-labelledby="themes">
 						<li>
-							<a tabindex="-1" href="<?php echo base_url(); ?>agenda/agenda_surat_masuk">Pertanggal</a>
+							<a tabindex="-1" href="<?php echo base_url(); ?>laporan/laporan_surat_masuk">Pertanggal</a>
 						</li>
 						<li>
-							<a tabindex="-1" href="<?php echo base_url(); ?>agenda/agenda_surat_masuk">Perklasifikasi Surat</a>
+							<a tabindex="-1" href="<?php echo base_url(); ?>laporan/laporan_klasifikasi_surat">Perklasifikasi Surat</a>
 						</li>
 						<li>
-							<a tabindex="-1" href="<?php echo base_url(); ?>agenda/agenda_surat_masuk">Sifat Surat</a>
+							<a tabindex="-1" href="<?php echo base_url(); ?>laporan/laporan_sifat_surat">Sifat Surat</a>
 						</li>
 						<li>
-							<a tabindex="-1" href="<?php echo base_url(); ?>agenda/agenda_surat_masuk">Pengirim Surat</a>
+							<a tabindex="-1" href="<?php echo base_url(); ?>laporan/laporan_pengirim_surat">Pengirim Surat</a>
 						</li>
 						<li>
-							<a tabindex="-1" href="<?php echo base_url(); ?>agenda/agenda_surat_masuk">Tujuan disposisi</a>
+							<a tabindex="-1" href="<?php echo base_url(); ?>laporan/laporan_tujuan_disposisi">Tujuan disposisi</a>
 						</li>
 						<li>
-							<a tabindex="-1" href="<?php echo base_url(); ?>agenda/agenda_surat_masuk">Perintruksi</a>
+							<a tabindex="-1" href="<?php echo base_url(); ?>laporan/laporan_kategori_intruksi">Kategori Intruksi</a>
 						</li>
 					</ul>
 				</li>

@@ -93,11 +93,22 @@
 			</div>
 			<!--state overview end-->	
 			
-			<div class="row">				
-				
+			<div class="row">
 				<div class="col-lg-6">
 					<!--Grafik Rekapitulasi-->
 					<div id="grafik" class="wow slideInRight" data-wow-duration="2s" ></div>
+				</div>
+				<div class="col-lg-6">
+					<!--Grafik Rekapitulasi-->
+					<div id="grafikSifatSurat" class="wow slideInRight" data-wow-duration="2s" ></div>
+				</div>
+				<div class="col-lg-6">
+					<!--Grafik Rekapitulasi-->
+					<div id="grafikTujuanDisposisi" class="wow slideInRight" data-wow-duration="2s" ></div>
+				</div>
+				<div class="col-lg-6">
+					<!--Grafik Rekapitulasi-->
+					<div id="grafikKategoriIntruksi" class="wow slideInRight" data-wow-duration="2s" ></div>
 				</div>
 			</div>
 			<br />
@@ -171,6 +182,164 @@
 					data: [<?= $countSuratMasukSelesai?>]
 
 				}]
+			});
+		});
+
+		$(function () {
+			$('#grafikSifatSurat').highcharts({
+				chart: {
+					type: 'column'
+				},
+				title: {
+					text: 'Grafik Berdasarkan Tujuan Disposisi'
+				},
+				xAxis: {
+					categories: [
+						<?php
+						foreach ($countSifatSurat as $sifat_surat) {
+							echo "'".$sifat_surat->disposisi_ke."',";
+						}
+						?>
+					],
+					crosshair: true
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: 'jumlah'
+					}
+				},
+				tooltip: {
+					headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+					pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+					'<td style="padding:0"><b>{point.y:.f} surat</b></td></tr>',
+					footerFormat: '</table>',
+					shared: true,
+					useHTML: true
+				},
+				plotOptions: {
+					column: {
+						pointPadding: 0.2,
+						borderWidth: 0
+					}
+				},
+				series: [
+				<?php
+				foreach ($countSifatSurat as $sifat_surat) {
+					echo "{";
+					echo "name: '".$sifat_surat->disposisi_ke."',";
+					echo "data: [".$sifat_surat->jum."],";
+					echo "},";
+				}
+				?>
+
+				]
+			});
+		});
+
+		$(function () {
+			$('#grafikTujuanDisposisi').highcharts({
+				chart: {
+					type: 'column'
+				},
+				title: {
+					text: 'Grafik Berdasarkan Sifat Surat'
+				},
+				xAxis: {
+					categories: [
+						<?php
+						foreach ($countTujuanDisposisi as $tujuan_disposisi) {
+							echo "'".$tujuan_disposisi->sifat_surat."',";
+						}
+						?>
+					],
+					crosshair: true
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: 'jumlah'
+					}
+				},
+				tooltip: {
+					headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+					pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+					'<td style="padding:0"><b>{point.y:.f} surat</b></td></tr>',
+					footerFormat: '</table>',
+					shared: true,
+					useHTML: true
+				},
+				plotOptions: {
+					column: {
+						pointPadding: 0.2,
+						borderWidth: 0
+					}
+				},
+				series: [
+				<?php
+				foreach ($countTujuanDisposisi as $tujuan_disposisi) {
+					echo "{";
+					echo "name: '".$tujuan_disposisi->sifat_surat."',";
+					echo "data: [".$tujuan_disposisi->jum."],";
+					echo "},";
+				}
+				?>
+
+				]
+			});
+		});
+
+		$(function () {
+			$('#grafikKategoriIntruksi').highcharts({
+				chart: {
+					type: 'column'
+				},
+				title: {
+					text: 'Grafik Berdasarkan Kategori Intruksi'
+				},
+				xAxis: {
+					categories: [
+						<?php
+						$kategori = array('1' => 'Tidak Ada Laporan', '2' => 'Ada Laporan');
+						foreach ($countKategoriIntruksi as $kategori_intruksi) {
+							echo "'".$kategori[$kategori_intruksi->kode_intruksi]."',";
+						}
+						?>
+					],
+					crosshair: true
+				},
+				yAxis: {
+					min: 0,
+					title: {
+						text: 'jumlah'
+					}
+				},
+				tooltip: {
+					headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+					pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+					'<td style="padding:0"><b>{point.y:.f} surat</b></td></tr>',
+					footerFormat: '</table>',
+					shared: true,
+					useHTML: true
+				},
+				plotOptions: {
+					column: {
+						pointPadding: 0.2,
+						borderWidth: 0
+					}
+				},
+				series: [
+				<?php
+					$kategori = array('1' => 'Tidak Ada Laporan', '2' => 'Ada Laporan');
+					foreach ($countKategoriIntruksi as $kategori_intruksi) {
+					echo "{";
+					echo "name: '".$kategori[$kategori_intruksi->kode_intruksi]."',";
+					echo "data: [".$kategori_intruksi->jum."],";
+					echo "},";
+				}
+				?>
+
+				]
 			});
 		});
 

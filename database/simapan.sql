@@ -34,14 +34,16 @@ CREATE TABLE IF NOT EXISTS `disposisi` (
   `catatan` varchar(300) NOT NULL,
   `lampiran_foto` varchar(300) NOT NULL,
   `lampiran_dokumen` varchar(300) DEFAULT NULL,
+  `tgl_laporan` date DEFAULT NULL,
   PRIMARY KEY (`id_disposisi`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
--- Dumping data for table simapan.disposisi: ~2 rows (approximately)
+-- Dumping data for table simapan.disposisi: ~3 rows (approximately)
 /*!40000 ALTER TABLE `disposisi` DISABLE KEYS */;
-REPLACE INTO `disposisi` (`id_disposisi`, `id_surat_masuk`, `kode_intruksi`, `isi_instruksi`, `tgl_instruksi`, `batas_waktu`, `waktu_lama_instruksi`, `paraf_kasi`, `paraf_kajari`, `tujuan_disposisi`, `tgl_disposisi`, `catatan`, `lampiran_foto`, `lampiran_dokumen`) VALUES
-	(1, 2, 2, 'Silakan langsung datang ke tempat', '2016-07-09', '2016-07-06', 25, '1', '1', '1', '2016-07-09', '', 'git.ppt', 'java_lect_21.pdf'),
-	(4, 3, 2, 'Silakan langsung datang ke tempat', '2016-07-09', '2016-07-09', 22, '1', '1', '5', '2016-07-09', '', 'git1.ppt', 'java_lect_211.pdf');
+REPLACE INTO `disposisi` (`id_disposisi`, `id_surat_masuk`, `kode_intruksi`, `isi_instruksi`, `tgl_instruksi`, `batas_waktu`, `waktu_lama_instruksi`, `paraf_kasi`, `paraf_kajari`, `tujuan_disposisi`, `tgl_disposisi`, `catatan`, `lampiran_foto`, `lampiran_dokumen`, `tgl_laporan`) VALUES
+	(1, 2, 2, 'Silakan langsung datang ke tempat', '2016-07-09', '2016-07-06', 30, '1', '1', '1', '2016-07-09', '', 'git.ppt', 'java_lect_213.pdf', '2016-08-05'),
+	(4, 3, 2, 'Silakan langsung datang ke tempat', '2016-07-09', '2016-07-09', 22, '1', '1', '5', '2016-07-09', '', 'git1.ppt', 'java_lect_211.pdf', '2016-08-05'),
+	(5, 4, 2, 'tes', '2016-08-05', '2016-08-04', 1, '1', '1', '3', '2016-08-05', 'tes', '', 'java_lect_212.pdf', '2016-08-05');
 /*!40000 ALTER TABLE `disposisi` ENABLE KEYS */;
 
 -- Dumping structure for table simapan.level
@@ -93,15 +95,28 @@ CREATE TABLE IF NOT EXISTS `pengguna` (
   `jabatan` varchar(200) NOT NULL,
   `id_level` int(10) NOT NULL,
   PRIMARY KEY (`id_pengguna`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
 
 -- Dumping data for table simapan.pengguna: ~4 rows (approximately)
 /*!40000 ALTER TABLE `pengguna` DISABLE KEYS */;
 REPLACE INTO `pengguna` (`id_pengguna`, `username`, `password`, `nama`, `nip`, `jabatan`, `id_level`) VALUES
-	(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Agus Irwan Kustiawan, S.IP', '123456789123456', 'Administrator', 1),
+	(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'Agus Irwan Kustiawan, S.IP', '19730810 200501 1 00', 'Administrator', 1),
 	(3, 'seklur', 'faca25fa364201d24b323a91a6f6b463', 'Seklur', '123456789123456', 'Seklur', 3),
 	(4, 'kasipem', 'ec326e3752a6419e328ae0c2e910e1c0', 'Kasi Pem', '123456789', 'Kasi Pem', 4),
-	(6, 'staf', '7b8a17c3f48d4453fde0fd74b4fa9212', 'Staf', '123456789123456', 'Staf', 2);
+	(6, 'staf', '7b8a17c3f48d4453fde0fd74b4fa9212', 'Staf', '123456789123456', 'Staf', 2),
+	(8, 'rully', '21232f297a57a5a743894a0e4a801fc3', 'RULLY SULFANORIDA, ST', '19710127 200501 1 00', 'Administrator', 1),
+	(9, 'agus', '21232f297a57a5a743894a0e4a801fc3', 'AGUS IRWAN KUSTIAWAN, S.IP', '19730810 200501 1 00', 'Administrator', 1),
+	(10, 'jajang', '21232f297a57a5a743894a0e4a801fc3', 'JAJANG BINTAYA, SE', '19800510 200701 1 00', 'Administrator', 1),
+	(11, 'nanang', '21232f297a57a5a743894a0e4a801fc3', 'NANANG SUNANDAR, SE', '19771223 200501 1 00', 'Administrator', 1),
+	(12, 'iyan', '21232f297a57a5a743894a0e4a801fc3', 'IYAN SUKMANA, S.IP', '19741202 200701 1 00', 'Administrator', 1),
+	(13, 'juanda', '21232f297a57a5a743894a0e4a801fc3', 'JUANDA INDRA BANGSAWAN, SE', '19660315 199203 1 00', 'Administrator', 1),
+	(14, 'nurdaningsih', '21232f297a57a5a743894a0e4a801fc3', 'NURDANINGSIH, S.SOS', '19800107 200801 2 00', 'Administrator', 1),
+	(15, 'wanda', '21232f297a57a5a743894a0e4a801fc3', 'WANDA, SE', '19810129 201001 1 00', 'Administrator', 1),
+	(16, 'bertha', '21232f297a57a5a743894a0e4a801fc3', 'BERTHA IMMANIA, S.IP', '19871012 200604 1 00', 'Administrator', 1),
+	(17, 'osid', '21232f297a57a5a743894a0e4a801fc3', 'OSID ROCHSIDI, S.Pd', '19740102 200604 1 00', 'Administrator', 1),
+	(18, 'siran', '21232f297a57a5a743894a0e4a801fc3', 'SIR\'AN', '19701110 200801 1 00', 'Administrator', 1),
+	(19, 'taufik', '21232f297a57a5a743894a0e4a801fc3', 'TAUFIK RAHMAN', '19830708 201001 1 00', 'Administrator', 1),
+	(20, 'dedi', '21232f297a57a5a743894a0e4a801fc3', 'DEDI SUPRIADI', '19780715 201406 1 00', 'Administrator', 1);
 /*!40000 ALTER TABLE `pengguna` ENABLE KEYS */;
 
 -- Dumping structure for table simapan.pengirim
@@ -339,18 +354,15 @@ CREATE TABLE IF NOT EXISTS `ref_sifat_surat` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `deskripsi` varchar(50) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
--- Dumping data for table simapan.ref_sifat_surat: ~7 rows (approximately)
+-- Dumping data for table simapan.ref_sifat_surat: ~4 rows (approximately)
 /*!40000 ALTER TABLE `ref_sifat_surat` DISABLE KEYS */;
 REPLACE INTO `ref_sifat_surat` (`id`, `deskripsi`) VALUES
 	(1, 'Biasa'),
 	(2, 'Penting'),
 	(3, 'Rahasia'),
-	(4, 'Segera'),
-	(5, 'Sangat Segera'),
-	(6, 'Lain-lain'),
-	(9, 'Super Rahasia');
+	(4, 'Segera');
 /*!40000 ALTER TABLE `ref_sifat_surat` ENABLE KEYS */;
 
 -- Dumping structure for table simapan.surat_masuk
@@ -367,18 +379,19 @@ CREATE TABLE IF NOT EXISTS `surat_masuk` (
   `no_agenda` varchar(30) NOT NULL,
   `lampiran` varchar(100) NOT NULL,
   `tgl_diterima` date NOT NULL,
-  `pengolah` int(5) NOT NULL,
+  `pengolah` varchar(50) NOT NULL,
   `keterangan` varchar(200) NOT NULL,
   `status_disposisi` int(11) NOT NULL,
   PRIMARY KEY (`id_surat_masuk`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 
--- Dumping data for table simapan.surat_masuk: ~3 rows (approximately)
+-- Dumping data for table simapan.surat_masuk: ~4 rows (approximately)
 /*!40000 ALTER TABLE `surat_masuk` DISABLE KEYS */;
 REPLACE INTO `surat_masuk` (`id_surat_masuk`, `kode_surat_masuk`, `no_surat_masuk`, `asal_surat_masuk`, `tgl_surat_masuk`, `status_surat_masuk`, `perihal_surat_masuk`, `tgl_penyelesaian`, `no_agenda`, `lampiran`, `tgl_diterima`, `pengolah`, `keterangan`, `status_disposisi`) VALUES
-	(2, '003', '12010', 'WALIKOTA CIMAHI', '2016-07-09', 'Biasa', 'Lebaran', '2016-07-09', '0001', 'House-GM1-04-800x6611.jpg', '2016-07-09', 0, '', 2),
-	(3, '230', '123.3/34.2016', 'WAKIL WALIKOTA CIMAHI', '2016-07-11', 'Penting', 'undangan', '2016-07-11', '0002', 'House-GM1-04-800x6612.jpg', '2016-07-10', 0, 'keterangan', 3),
-	(4, '360', '33', 'KECAMATAN CIMAHI SELATAN', '2016-07-19', 'Segera', 'tes', '0000-00-00', '0003', '', '2016-07-31', 0, '', 1);
+	(2, '003', '12010', 'WALIKOTA CIMAHI', '2016-07-09', 'Biasa', 'Lebaran', '2016-07-09', '0001', 'House-GM1-04-800x6611.jpg', '2016-07-09', '0', '', 3),
+	(3, '230', '123.3/34.2016', 'WAKIL WALIKOTA CIMAHI', '2016-07-11', 'Penting', 'undangan', '2016-07-11', '0002', 'House-GM1-04-800x6612.jpg', '2016-07-10', '0', 'keterangan', 3),
+	(4, '360', '33', 'KECAMATAN CIMAHI SELATAN', '2016-07-19', 'Segera', 'tes', '0000-00-00', '0003', '', '2016-07-31', '0', '', 3),
+	(7, '730', '33333', 'KANTOR LINGKUNGAN HIDUP', '2016-08-30', 'Biasa', 'tes', '0000-00-00', '0004', 'java_lect_215.pdf', '2016-08-06', 'Agus Irwan Kustiawan, S.IP', '3', 1);
 /*!40000 ALTER TABLE `surat_masuk` ENABLE KEYS */;
 
 -- Dumping structure for table simapan.tr_instansi

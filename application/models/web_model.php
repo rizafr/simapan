@@ -89,11 +89,6 @@ class Web_model extends CI_Model {
         return $return;
     }
 	
-	
-	
-
-	
-	
 	function getFieldTable($tabel, $field, $id, $id_value) {
 		$q = $this->db->query("SELECT $field FROM $tabel WHERE $id = $id_value");
 		return $q->row();
@@ -161,6 +156,55 @@ class Web_model extends CI_Model {
         return false;
     }
 
+
+	/*
+	 * Laporan
+	 */
+	function get_all_klasifikasi()
+	{
+		$this->db->select('*');
+		$this->db->from('ref_klasifikasi');
+		$this->db->order_by("kode", "asc");
+		$query = $this->db->get();
+
+		return $query->result();
+	}
+
+	function get_all_sifat_surat()
+	{
+		$this->db->select('*');
+		$this->db->from('ref_sifat_surat');
+		$this->db->order_by("deskripsi", "asc");
+		$query = $this->db->get();
+
+		return $query->result();
+	}
+
+	function get_all_pengirim_surat()
+	{
+		$this->db->select('*');
+		$this->db->from('pengirim');
+		$this->db->order_by("instansi", "asc");
+		$query = $this->db->get();
+
+		return $query->result();
+	}
+
+	function get_tujuan_disposisi()
+	{
+		$this->db->select('*');
+		$this->db->from('ref_disposisi');
+		$this->db->order_by("tujuan_disposisi", "asc");
+		$query = $this->db->get();
+
+		return $query->result();
+	}
+
+
+
+	/*
+	 * Count
+	 */
 	public function getCountSuratMasuk() {
 		$query = $this->db->get('surat_masuk');
 
@@ -188,6 +232,21 @@ class Web_model extends CI_Model {
 		$query = $this->db->get('surat_masuk');
 
 		return $query->num_rows();
+	}
+	
+	public  function getCountSifatSurat() {
+		$query = $this->db->query("SELECT rd.tujuan_disposisi as disposisi_ke, count(sm.kode_surat_masuk) as jum FROM surat_masuk sm, disposisi d, ref_disposisi rd WHERE d.id_surat_masuk = sm.id_surat_masuk AND d.tujuan_disposisi=rd.id group by rd.tujuan_disposisi ORDER BY sm.tgl_diterima desc ");
+		return $query->result();
+	}
+
+	public  function getCountTujuanDisposisi() {
+		$query = $this->db->query("SELECT sm.status_surat_masuk as sifat_surat, count(sm.kode_surat_masuk) as jum FROM surat_masuk sm, disposisi d, ref_disposisi rd WHERE  d.id_surat_masuk = sm.id_surat_masuk AND d.tujuan_disposisi=rd.id group by sm.status_surat_masuk ORDER BY sm.tgl_diterima desc ");
+		return $query->result();
+	}
+
+	public  function getCountKategoriIntruksi() {
+		$query = $this->db->query("SELECT d.kode_intruksi as kode_intruksi, count(d.kode_intruksi) as jum FROM surat_masuk sm, disposisi d, ref_disposisi rd WHERE d.id_surat_masuk = sm.id_surat_masuk AND d.tujuan_disposisi=rd.id GROUP BY d.kode_intruksi  ORDER BY sm.tgl_diterima desc");
+		return $query->result();
 	}
 
 	

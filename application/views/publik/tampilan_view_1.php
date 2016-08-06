@@ -147,7 +147,7 @@
 				<a href="<?php echo base_url(); ?>admin/homes" class="navbar-brand visible-sm">
 				</a>
 				<a href="<?php echo base_url(); ?>admin/homes" class="navbar-brand visible-xs">
-					<small><strong>.:: SIAPRA ::.</strong></small>
+					<small><strong>.:: SIMAPAN ::.</strong></small>
 				</a>
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse1">
 					<i class="glyphicon glyphicon-search"></i>

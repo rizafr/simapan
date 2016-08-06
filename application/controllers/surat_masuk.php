@@ -5,6 +5,7 @@ class Surat_masuk extends CI_Controller {
 		parent::__construct();
 		$this->load->library('breadcrumbs');
 		$this->load->model('crud_sifat_surat');
+		$this->load->model('web_model');
 	}
 	
 	public function index() {
@@ -58,7 +59,7 @@ class Surat_masuk extends CI_Controller {
 		$perihal_surat_masuk	= addslashes($this->input->post('perihal_surat_masuk'));
 		$keterangan				= addslashes($this->input->post('keterangan'));
 		$status_disposisi		= addslashes($this->input->post('status_disposisi'));
-		
+		$pengolah = $this->session->userdata('admin_nama');
 		$cari					= addslashes($this->input->post('q'));
 
 		//upload config 
@@ -95,9 +96,9 @@ class Surat_masuk extends CI_Controller {
 			if ($this->upload->do_upload('lampiran')) {
 				$up_data	 	= $this->upload->data();
 				
-				$this->db->query("INSERT INTO surat_masuk VALUES (NULL, '$kode_surat_masuk', '$no_surat_masuk', '$asal_surat_masuk', '$tgl_surat_masuk', '$status_surat_masuk', '$perihal_surat_masuk', '$tgl_penyelesaian', '$no_agenda', '".$up_data['file_name']."', '$tgl_diterima', '".$this->session->userdata('admin_user')."', '$keterangan','1' )");
+				$this->db->query("INSERT INTO surat_masuk VALUES (NULL, '$kode_surat_masuk', '$no_surat_masuk', '$asal_surat_masuk', '$tgl_surat_masuk', '$status_surat_masuk', '$perihal_surat_masuk', '$tgl_penyelesaian', '$no_agenda', '".$up_data['file_name']."', '$tgl_diterima', '".$pengolah."', '$keterangan','1' )");
 			} else {
-				$this->db->query("INSERT INTO surat_masuk VALUES (NULL, '$kode_surat_masuk', '$no_surat_masuk', '$asal_surat_masuk', '$tgl_surat_masuk', '$status_surat_masuk', '$perihal_surat_masuk', '$tgl_penyelesaian', '$no_agenda', '', '$tgl_diterima', '".$this->session->userdata('admin_user')."', '$keterangan','1')");
+				$this->db->query("INSERT INTO surat_masuk VALUES (NULL, '$kode_surat_masuk', '$no_surat_masuk', '$asal_surat_masuk', '$tgl_surat_masuk', '$status_surat_masuk', '$perihal_surat_masuk', '$tgl_penyelesaian', '$no_agenda', '', '$tgl_diterima', '".$pengolah."', '$keterangan','1')");
 			}	
 			
 			$this->session->set_flashdata("k", "<div class=\"alert alert-success\" id_surat_masuk=\"alert\"><a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>Data berhasil ditambahkan. ".$this->upload->display_errors()."</div>");
@@ -121,7 +122,11 @@ class Surat_masuk extends CI_Controller {
 													order by sm.tgl_diterima ASC  LIMIT $awal, $akhir ")->result();
 			$a['page']		= "surat_masuk/l_surat_masuk";
 		}
-		
+		$a['countSuratMasuk']	= $this->web_model->getCountSuratMasuk();
+		$a['countSuratMasukSelesai']	= $this->web_model->getCountSuratMasukSelesai();
+		$a['countSuratBelumDisposisi']	= $this->web_model->getCountSuratBelumDisposisi();
+		$a['countSuratMasukNotReported']	= $this->web_model->getCountSuratMasukNotReported();
+
 		$this->load->view('admin/index', $a);
 	}
 }
