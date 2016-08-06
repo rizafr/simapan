@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e57f5aeb-fc1b-4974-b162-f42f296c37f1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/laporan/kategori_intruksi/f_laporan_kategori_intruksi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/laporan/kategori_intruksi/kategori_intruksi_cetak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/laporan/klasifikasi_surat/klasifikasi_cetak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/laporan/pengirim_surat/f_laporan_pengirim_surat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/laporan/pengirim_surat/pengirim_surat_cetak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/laporan/sifat_surat/f_laporan_sifat_surat.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/laporan/sifat_surat/sifat_surat_cetak.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/laporan/tujuan_disposisi/f_laporan_tujuan_disposisi.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/laporan/tujuan_disposisi/tujuan_disposisi_cetak.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/controllers/agenda.php" afterPath="$PROJECT_DIR$/application/controllers/laporan.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/agenda/f_agenda_jaksa.php" afterPath="$PROJECT_DIR$/application/views/admin/laporan/f_agenda_jaksa.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/agenda/f_agenda_surat.php" afterPath="$PROJECT_DIR$/application/views/admin/laporan/f_laporan_surat.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/agenda/jaksa_cetak.php" afterPath="$PROJECT_DIR$/application/views/admin/laporan/jaksa_cetak.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/agenda/surat_keluar_cetak.php" afterPath="$PROJECT_DIR$/application/views/admin/laporan/surat_keluar_cetak.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/application/views/admin/agenda/surat_masuk_cetak.php" afterPath="$PROJECT_DIR$/application/views/admin/laporan/surat_masuk_cetak.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin.php" afterPath="$PROJECT_DIR$/application/controllers/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/disposisi.php" afterPath="$PROJECT_DIR$/application/controllers/disposisi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/surat_masuk.php" afterPath="$PROJECT_DIR$/application/controllers/surat_masuk.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/web_model.php" afterPath="$PROJECT_DIR$/application/models/web_model.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/beranda.php" afterPath="$PROJECT_DIR$/application/views/admin/beranda.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/template/menu.php" afterPath="$PROJECT_DIR$/application/views/admin/template/menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/publik/tampilan_view_1.php" afterPath="$PROJECT_DIR$/application/views/publik/tampilan_view_1.php" />
-    </list>
+    <list default="true" id="e57f5aeb-fc1b-4974-b162-f42f296c37f1" name="Default" comment="" />
     <ignored path="simapan.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -509,16 +485,16 @@
       <workItem from="1469941296417" duration="13000" />
       <workItem from="1469941324538" duration="8191000" />
       <workItem from="1470408275058" duration="10170000" />
-      <workItem from="1470443984317" duration="4049000" />
+      <workItem from="1470443984317" duration="4344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74338000" />
+    <option name="totallyTimeSpent" value="74633000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="742" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28483447" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />

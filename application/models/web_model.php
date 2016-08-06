@@ -235,12 +235,12 @@ class Web_model extends CI_Model {
 	}
 	
 	public  function getCountSifatSurat() {
-		$query = $this->db->query("SELECT rd.tujuan_disposisi as disposisi_ke, count(sm.kode_surat_masuk) as jum FROM surat_masuk sm, disposisi d, ref_disposisi rd WHERE d.id_surat_masuk = sm.id_surat_masuk AND d.tujuan_disposisi=rd.id group by rd.tujuan_disposisi ORDER BY sm.tgl_diterima desc ");
+		$query = $this->db->query("SELECT rd.tujuan_disposisi as disposisi_ke, count(rd.tujuan_disposisi) as jum FROM surat_masuk sm, disposisi d, ref_disposisi rd WHERE d.id_surat_masuk = sm.id_surat_masuk AND d.tujuan_disposisi=rd.id group by rd.tujuan_disposisi ORDER BY sm.tgl_diterima desc ");
 		return $query->result();
 	}
 
 	public  function getCountTujuanDisposisi() {
-		$query = $this->db->query("SELECT sm.status_surat_masuk as sifat_surat, count(sm.kode_surat_masuk) as jum FROM surat_masuk sm, disposisi d, ref_disposisi rd WHERE  d.id_surat_masuk = sm.id_surat_masuk AND d.tujuan_disposisi=rd.id group by sm.status_surat_masuk ORDER BY sm.tgl_diterima desc ");
+		$query = $this->db->query("SELECT sm.status_surat_masuk as sifat_surat, count(sm.status_surat_masuk) as jum FROM surat_masuk sm group by sm.status_surat_masuk ORDER BY sm.tgl_diterima desc ");
 		return $query->result();
 	}
 
